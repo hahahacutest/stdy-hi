@@ -1,0 +1,1986 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📚 Hukum Internasional – Rangkuman Super Lengkap</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1a3a6b;--sky:#3b82f6;--teal:#0d9488;--purple:#7c3aed;
+    --pink:#db2777;--orange:#ea580c;--yellow:#d97706;--green:#16a34a;
+    --red:#dc2626;--bg:#f0f4ff;--card:#fff;--text:#1e293b;--muted:#64748b;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
+
+  /* HERO */
+  .hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 50%,#1e1b4b 100%);
+    color:#fff;padding:48px 24px 36px;text-align:center;position:relative;overflow:hidden;}
+  .hero::before{content:'⚖️ 🌍 📜 🏛️ 🤝';position:absolute;top:10px;left:0;right:0;
+    font-size:60px;opacity:.06;letter-spacing:20px;white-space:nowrap;}
+  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3rem);
+    font-weight:900;margin-bottom:10px;text-shadow:0 2px 20px rgba(0,0,0,.5);}
+  .hero p{color:#93c5fd;font-size:1rem;max-width:600px;margin:0 auto 20px;}
+  .badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);
+    border-radius:50px;padding:6px 18px;font-size:.85rem;color:#bfdbfe;margin:4px;}
+
+  /* NAV TABS */
+  .tab-nav{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08);
+    position:sticky;top:0;z-index:100;overflow-x:auto;white-space:nowrap;}
+  .tab-nav::-webkit-scrollbar{height:4px;}
+  .tab-nav::-webkit-scrollbar-thumb{background:var(--sky);border-radius:4px;}
+  .tab-btn{display:inline-block;padding:14px 22px;font-family:'DM Sans',sans-serif;
+    font-weight:600;font-size:.88rem;cursor:pointer;border:none;background:transparent;
+    color:var(--muted);border-bottom:3px solid transparent;transition:all .2s;}
+  .tab-btn:hover{color:var(--blue);background:#f8faff;}
+  .tab-btn.active{color:var(--blue);border-bottom-color:var(--sky);background:#f0f6ff;}
+
+  /* CONTAINER */
+  .container{max-width:960px;margin:0 auto;padding:32px 16px;}
+
+  /* SECTION HEADER */
+  .sec-header{display:flex;align-items:center;gap:14px;margin-bottom:28px;}
+  .sec-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;
+    justify-content:center;font-size:1.5rem;flex-shrink:0;}
+  .sec-header h2{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;}
+  .sec-header p{color:var(--muted);font-size:.9rem;margin-top:4px;}
+
+  /* CARDS */
+  .card{background:var(--card);border-radius:var(--radius);box-shadow:0 2px 16px rgba(0,0,0,.07);
+    padding:28px;margin-bottom:20px;border-left:5px solid transparent;}
+  .card.blue{border-color:var(--sky);}
+  .card.teal{border-color:var(--teal);}
+  .card.purple{border-color:var(--purple);}
+  .card.pink{border-color:var(--pink);}
+  .card.orange{border-color:var(--orange);}
+  .card.green{border-color:var(--green);}
+  .card.red{border-color:var(--red);}
+  .card.yellow{border-color:var(--yellow);}
+  .card h3{font-weight:700;font-size:1.1rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+  .card p,.card li{font-size:.94rem;line-height:1.7;color:#334155;}
+  .card ul,.card ol{padding-left:20px;margin-top:8px;}
+  .card li{margin-bottom:6px;}
+
+  /* INFO BOX */
+  .info-box{border-radius:12px;padding:18px 22px;margin:14px 0;font-size:.93rem;line-height:1.65;}
+  .info-box.yellow{background:#fef9c3;border-left:4px solid #ca8a04;}
+  .info-box.blue{background:#eff6ff;border-left:4px solid #2563eb;}
+  .info-box.green{background:#f0fdf4;border-left:4px solid #16a34a;}
+  .info-box.red{background:#fef2f2;border-left:4px solid #dc2626;}
+  .info-box.purple{background:#f5f3ff;border-left:4px solid #7c3aed;}
+  .info-box.teal{background:#f0fdfa;border-left:4px solid #0d9488;}
+  .info-box.orange{background:#fff7ed;border-left:4px solid #ea580c;}
+  .info-box strong{font-weight:700;}
+
+  /* TIMELINE */
+  .timeline{padding-left:28px;border-left:3px solid #e2e8f0;margin:16px 0;}
+  .timeline-item{position:relative;padding:12px 0 12px 20px;margin-bottom:4px;}
+  .timeline-item::before{content:'';position:absolute;left:-30px;top:18px;
+    width:14px;height:14px;border-radius:50%;background:var(--sky);
+    border:2px solid #fff;box-shadow:0 0 0 2px var(--sky);}
+  .timeline-item h4{font-weight:700;font-size:.95rem;color:var(--blue);}
+  .timeline-item p{font-size:.89rem;color:#475569;margin-top:4px;line-height:1.6;}
+
+  /* COMPARISON TABLE */
+  .table-wrap{overflow-x:auto;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);}
+  table{width:100%;border-collapse:collapse;background:#fff;}
+  th{background:var(--blue);color:#fff;padding:12px 16px;text-align:left;font-size:.88rem;font-weight:600;}
+  td{padding:11px 16px;border-bottom:1px solid #e2e8f0;font-size:.88rem;line-height:1.5;}
+  tr:hover td{background:#f8faff;}
+  td:first-child{font-weight:600;color:var(--blue);}
+
+  /* SOAL SECTION */
+  .soal-header{background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;
+    border-radius:14px;padding:22px 26px;margin-bottom:24px;}
+  .soal-header h2{font-family:'Playfair Display',serif;font-size:1.5rem;}
+  .soal-header p{color:#c7d2fe;font-size:.9rem;margin-top:6px;}
+
+  .soal-card{background:#fff;border-radius:14px;box-shadow:0 2px 14px rgba(0,0,0,.07);
+    margin-bottom:18px;overflow:hidden;}
+  .soal-num{display:inline-block;background:var(--sky);color:#fff;border-radius:8px;
+    padding:3px 10px;font-size:.8rem;font-weight:700;margin-bottom:10px;}
+  .soal-num.pg{background:var(--purple);}
+  .soal-num.isian{background:var(--teal);}
+  .soal-num.kasus{background:var(--orange);}
+  .soal-num.essay{background:var(--pink);}
+  .soal-body{padding:20px 24px;}
+  .soal-body p{font-size:.94rem;font-weight:600;line-height:1.6;margin-bottom:12px;}
+  .option{background:#f8faff;border:1.5px solid #e2e8f0;border-radius:8px;
+    padding:9px 14px;margin:5px 0;font-size:.9rem;cursor:pointer;
+    transition:all .2s;display:flex;align-items:flex-start;gap:10px;}
+  .option:hover{border-color:var(--sky);background:#eff6ff;}
+  .option.correct{background:#f0fdf4;border-color:var(--green);color:#166534;}
+  .option.wrong{background:#fef2f2;border-color:var(--red);color:#991b1b;}
+  .option .opt-label{font-weight:700;width:20px;flex-shrink:0;color:var(--blue);}
+  .jawaban{background:#f0fdf4;border:1.5px solid #86efac;border-radius:10px;
+    padding:14px 18px;margin-top:14px;font-size:.9rem;display:none;}
+  .jawaban.show{display:block;}
+  .jawaban strong{color:#166534;}
+  .btn-show{background:transparent;border:1.5px solid var(--green);color:var(--green);
+    border-radius:8px;padding:6px 16px;font-size:.85rem;font-weight:600;cursor:pointer;
+    margin-top:10px;transition:all .2s;}
+  .btn-show:hover{background:var(--green);color:#fff;}
+
+  /* FILL BLANK */
+  .fill-input{border:2px solid #cbd5e1;border-radius:8px;padding:6px 12px;
+    font-size:.9rem;min-width:180px;font-family:'DM Sans',sans-serif;
+    transition:border-color .2s;}
+  .fill-input:focus{outline:none;border-color:var(--sky);}
+  .fill-input.correct{border-color:var(--green);background:#f0fdf4;}
+  .fill-input.wrong{border-color:var(--red);background:#fef2f2;}
+
+  /* CASE STUDY */
+  .case-box{background:linear-gradient(135deg,#1e3a8a10,#7c3aed10);
+    border:1.5px solid #c7d2fe;border-radius:14px;padding:24px;margin:14px 0;}
+  .case-box .case-title{font-weight:700;font-size:1rem;color:var(--purple);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+  .case-box p{font-size:.91rem;line-height:1.7;color:#374151;}
+  .case-box .case-q{background:#fff;border-radius:10px;padding:14px;margin-top:14px;
+    border-left:4px solid var(--purple);}
+  .case-box .case-q strong{display:block;color:var(--purple);margin-bottom:6px;font-size:.9rem;}
+
+  /* HIGHLIGHT KEYWORD */
+  .kw{background:#fef9c3;padding:1px 5px;border-radius:4px;font-weight:700;color:#92400e;}
+  .kw2{background:#dbeafe;padding:1px 5px;border-radius:4px;font-weight:700;color:#1e40af;}
+  .kw3{background:#f0fdf4;padding:1px 5px;border-radius:4px;font-weight:700;color:#166534;}
+
+  /* GRID */
+  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;}
+
+  /* PILL TAGS */
+  .tag{display:inline-block;border-radius:50px;padding:4px 14px;font-size:.8rem;font-weight:600;margin:3px;}
+  .tag.blue{background:#dbeafe;color:#1e40af;}
+  .tag.green{background:#dcfce7;color:#166534;}
+  .tag.purple{background:#ede9fe;color:#5b21b6;}
+  .tag.orange{background:#ffedd5;color:#9a3412;}
+  .tag.pink{background:#fce7f3;color:#9d174d;}
+  .tag.teal{background:#ccfbf1;color:#0f766e;}
+
+  /* PROGRESS / STAT */
+  .stat-row{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0;}
+  .stat{background:linear-gradient(135deg,#1e3a8a,#3b82f6);color:#fff;
+    border-radius:12px;padding:16px 20px;flex:1;min-width:130px;text-align:center;}
+  .stat .num{font-size:1.8rem;font-weight:900;font-family:'Playfair Display',serif;}
+  .stat .lbl{font-size:.8rem;opacity:.8;margin-top:4px;}
+
+  /* UJIAN TIPS */
+  .tips-box{background:linear-gradient(135deg,#fef3c7,#fde68a);border-radius:14px;
+    padding:22px 26px;border:2px solid #f59e0b;margin:20px 0;}
+  .tips-box h3{color:#92400e;font-size:1rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+  .tips-box li{font-size:.9rem;color:#78350f;line-height:1.7;margin-bottom:4px;}
+
+  /* RESPONSIVE */
+  @media(max-width:600px){
+    .hero h1{font-size:1.5rem;}
+    .tab-btn{padding:10px 14px;font-size:.82rem;}
+    .container{padding:20px 12px;}
+    .card{padding:18px;}
+  }
+
+  /* HIDDEN TABS */
+  .tab-content{display:none;}
+  .tab-content.active{display:block;}
+
+  /* BACK TO TOP */
+  .back-top{position:fixed;bottom:24px;right:24px;background:var(--blue);color:#fff;
+    border:none;border-radius:50%;width:44px;height:44px;font-size:1.2rem;cursor:pointer;
+    box-shadow:0 4px 14px rgba(0,0,0,.3);transition:transform .2s;}
+  .back-top:hover{transform:translateY(-3px);}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>⚖️ Hukum Internasional<br>Rangkuman Super Lengkap</h1>
+  <p>Dari nol sampai siap ujian — dijelaskan kayak ngobrol sama teman, bukan dosen!</p>
+  <div>
+    <span class="badge">📖 6 Modul Lengkap</span>
+    <span class="badge">❓ 150+ Soal Latihan</span>
+    <span class="badge">⚡ Contoh Kasus Nyata</span>
+    <span class="badge">✅ Kunci Jawaban</span>
+  </div>
+</div>
+
+<!-- NAV TABS -->
+<div class="tab-nav">
+  <button class="tab-btn active" onclick="showTab('tab0')">🏠 Overview</button>
+  <button class="tab-btn" onclick="showTab('tab1')">📌 Modul 1: Pendahuluan</button>
+  <button class="tab-btn" onclick="showTab('tab2')">🌍 Modul 2: Masyarakat Int'l</button>
+  <button class="tab-btn" onclick="showTab('tab3')">📜 Modul 3: Sejarah HI</button>
+  <button class="tab-btn" onclick="showTab('tab4')">📚 Modul 4: Sumber HI</button>
+  <button class="tab-btn" onclick="showTab('tab5')">⚖️ Modul 5: HI & HN</button>
+  <button class="tab-btn" onclick="showTab('tab6')">👥 Modul 6: Subyek HI</button>
+  <button class="tab-btn" onclick="showTab('tabsoal')">🎯 BANK SOAL UJIAN</button>
+</div>
+
+<!-- ===================== TAB 0: OVERVIEW ===================== -->
+<div id="tab0" class="tab-content active">
+<div class="container">
+  <div class="sec-header">
+    <div class="sec-icon" style="background:#dbeafe;">🗺️</div>
+    <div>
+      <h2>Peta Materi Hukum Internasional</h2>
+      <p>Gambaran besar sebelum kita masuk ke detail</p>
+    </div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat"><div class="num">6</div><div class="lbl">Modul Materi</div></div>
+    <div class="stat" style="background:linear-gradient(135deg,#0d9488,#14b8a6)"><div class="num">150+</div><div class="lbl">Soal Latihan</div></div>
+    <div class="stat" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)"><div class="num">10+</div><div class="lbl">Contoh Kasus</div></div>
+    <div class="stat" style="background:linear-gradient(135deg,#db2777,#f472b6)"><div class="num">100%</div><div class="lbl">Ada Jawaban</div></div>
+  </div>
+
+  <div class="info-box yellow">
+    <strong>🧠 Hukum Internasional itu apa sih?</strong><br>
+    Bayangin kamu tinggal di kompleks perumahan besar. Setiap rumah = satu negara. Nah, <em>Hukum Internasional (HI)</em> itu ibarat peraturan kompleks — ngatur gimana antar-penghuni (negara) harus berperilaku satu sama lain. Siapa boleh masuk pekarangan siapa, gimana cara damai kalau ada konflik, dll.
+  </div>
+
+  <div class="grid2">
+    <div class="card blue">
+      <h3>📌 Modul 1: Pendahuluan</h3>
+      <p>Pengertian, definisi, peristilahan HI, bentuk perwujudan, dan daya mengikat HI.</p>
+      <div class="tag blue">Definisi</div><div class="tag blue">Daya Mengikat</div><div class="tag blue">Jeremy Bentham</div>
+    </div>
+    <div class="card teal">
+      <h3>🌍 Modul 2: Masyarakat Internasional</h3>
+      <p>Landasan sosiologis HI, kedaulatan negara, masyarakat internasional dalam peralihan.</p>
+      <div class="tag teal">Kedaulatan</div><div class="tag teal">Ubi Societas</div><div class="tag teal">ASEAN</div>
+    </div>
+    <div class="card purple">
+      <h3>📜 Modul 3: Sejarah HI</h3>
+      <p>Perkembangan HI dari zaman kuno, pertengahan, Islam, modern, hingga era globalisasi.</p>
+      <div class="tag purple">Grotius</div><div class="tag purple">Westphalia</div><div class="tag purple">PBB</div>
+    </div>
+    <div class="card orange">
+      <h3>📚 Modul 4: Sumber HI</h3>
+      <p>Pasal 38 ICJ Statute: perjanjian internasional, kebiasaan, prinsip umum, putusan, doktrin.</p>
+      <div class="tag orange">Traktat</div><div class="tag orange">Opinio Juris</div><div class="tag orange">Pasal 38</div>
+    </div>
+    <div class="card pink">
+      <h3>⚖️ Modul 5: HI dan HN</h3>
+      <p>Teori Monisme vs Dualisme, praktek negara dalam menerapkan HI di domestik.</p>
+      <div class="tag pink">Monisme</div><div class="tag pink">Dualisme</div><div class="tag pink">Kelsen</div>
+    </div>
+    <div class="card green">
+      <h3>👥 Modul 6: Subyek HI</h3>
+      <p>Negara, organisasi internasional, PMI, Vatikan, individu, dan kaum pemberontak.</p>
+      <div class="tag green">Negara</div><div class="tag green">PBB</div><div class="tag green">Individu</div>
+    </div>
+  </div>
+
+  <div class="tips-box">
+    <h3>💡 Tips Belajar HI untuk Ujian</h3>
+    <ul>
+      <li>Hafalkan <strong>Pasal 38 ICJ Statute</strong> — selalu keluar di ujian sumber HI!</li>
+      <li>Ingat nama tokoh: <strong>Jeremy Bentham</strong> (istilah HI), <strong>Hugo Grotius</strong> (Bapak HI), <strong>Hans Kelsen</strong> (Monisme &amp; Mazhab Wina)</li>
+      <li>Bedakan <strong>Monisme vs Dualisme</strong> — sering jadi soal essay!</li>
+      <li>Hafalkan <strong>4 syarat negara</strong> Konvensi Montevideo 1933</li>
+      <li>Ingat <strong>2 elemen kebiasaan internasional</strong>: Praktek Negara + Opinio Juris</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ===================== TAB 1: MODUL 1 ===================== -->
+<div id="tab1" class="tab-content">
+<div class="container">
+  <div class="sec-header">
+    <div class="sec-icon" style="background:#dbeafe;">📌</div>
+    <div>
+      <h2>Modul 1: Pendahuluan Hukum Internasional</h2>
+      <p>Mulai dari nol — apa itu HI, istilahnya, dan kenapa bisa mengikat</p>
+    </div>
+  </div>
+
+  <div class="card blue">
+    <h3>🌐 Apa itu Hukum Internasional?</h3>
+    <div class="info-box blue">
+      <strong>Definisi Resmi:</strong> Himpunan peraturan-peraturan dan ketentuan-ketentuan yang mengikat serta mengatur hubungan antara negara-negara dan subyek-subyek hukum lainnya dalam kehidupan masyarakat internasional.
+    </div>
+    <p>Sederhananya: <span class="kw">HI = aturan main antar negara di level global</span></p>
+    <p style="margin-top:8px;">Istilah ini pertama kali diperkenalkan oleh <span class="kw2">Jeremy Bentham</span> (filsuf Inggris) pada akhir abad ke-18.</p>
+  </div>
+
+  <div class="card teal">
+    <h3>📖 Berbagai Istilah untuk Hukum Internasional</h3>
+    <div class="table-wrap">
+    <table>
+      <tr><th>Istilah</th><th>Bahasa</th><th>Asal</th></tr>
+      <tr><td>Law of Nations / Droit de Gens</td><td>Inggris/Perancis</td><td>Ius Gentium (Romawi)</td></tr>
+      <tr><td>Völkerrecht</td><td>Jerman</td><td>Ius Gentium (Romawi)</td></tr>
+      <tr><td>Hukum Bangsa-Bangsa</td><td>Indonesia</td><td>Hubungan antar raja-raja kuno</td></tr>
+      <tr><td>Hukum Antarbangsa / Antarnegara</td><td>Indonesia</td><td>Hubungan antar negara modern</td></tr>
+      <tr><td><strong>Hukum Internasional</strong></td><td>Indonesia</td><td>Jeremy Bentham (resmi)</td></tr>
+    </table>
+    </div>
+    <div class="info-box yellow" style="margin-top:12px;">
+      <strong>⚠️ Perhatikan bedanya!</strong> <span class="kw">"Hukum Bangsa-Bangsa"</span> = hubungan antar raja-raja ZAMAN DULU (belum resmi). <span class="kw2">"Hukum Internasional"</span> = istilah RESMI & MODERN sejak Jeremy Bentham.
+    </div>
+  </div>
+
+  <div class="card purple">
+    <h3>🔍 HI Publik vs HI Privat (Hukum Perdata Internasional)</h3>
+    <div class="table-wrap">
+    <table>
+      <tr><th>Aspek</th><th>HI Publik</th><th>HI Privat (HPI)</th></tr>
+      <tr><td>Nama lain</td><td>Hukum Internasional</td><td>Conflict of Laws</td></tr>
+      <tr><td>Subyek utama</td><td>Negara, Org. Internasional</td><td>Individu/perorangan</td></tr>
+      <tr><td>Obyek</td><td>Hubungan NON-perdata lintas negara</td><td>Hubungan PERDATA lintas negara</td></tr>
+      <tr><td>Contoh</td><td>Perjanjian damai, perang</td><td>Kontrak bisnis antar WNA</td></tr>
+    </table>
+    </div>
+    <div class="info-box teal" style="margin-top:10px;">
+      <strong>Persamaan:</strong> Keduanya mengatur hubungan yang melintas batas negara.<br>
+      <strong>Perbedaan:</strong> HI Publik = NON-perdata. HPI = PERDATA.
+    </div>
+  </div>
+
+  <div class="card orange">
+    <h3>🏗️ Bentuk Perwujudan Hukum Internasional</h3>
+    <div class="grid2">
+      <div class="info-box blue">
+        <strong>1. HI Regional</strong><br>
+        Berlaku di kawasan tertentu saja.<br>
+        Contoh: Konsep <em>Continental Shelf</em> yang mula-mula tumbuh di Amerika Latin.
+      </div>
+      <div class="info-box purple">
+        <strong>2. HI Khusus</strong><br>
+        Berlaku bagi negara-negara tertentu saja.<br>
+        Contoh: <em>Konvensi Eropa tentang HAM</em>.
+      </div>
+    </div>
+    <div class="info-box green">
+      <strong>3. HI Umum</strong> → Berlaku untuk semua negara di dunia (bersifat universal).
+    </div>
+  </div>
+
+  <div class="card red">
+    <h3>⚡ Daya Mengikat HI — Kenapa Negara Mau Taat?</h3>
+    <p>Inilah pertanyaan besar! John Austin bahkan bilang HI bukan hukum karena tidak ada yang memaksakan. Tapi faktanya HI tetap ada dan dipatuhi. Ini beberapa teorinya:</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>🌿 Teori Hukum Alam (Natural Law)</h4>
+        <p>HI berlaku karena merupakan bagian dari hukum tertinggi — <strong>hukum alam</strong> yang berasal dari akal budi manusia. Tokoh: <span class="kw">Hugo Grotius, Emmeric Vattel</span>.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>🏛️ Teori Kehendak Negara</h4>
+        <p>HI mengikat karena negara sendiri yang mau tunduk. Negara = pemegang kedaulatan = sumber hukum. Kelemahan: kalau negara mau menarik diri, bisa!</p>
+      </div>
+      <div class="timeline-item">
+        <h4>🤝 Teori Kehendak Bersama (Triepel)</h4>
+        <p>Kekuatan mengikat berasal dari <em>kehendak bersama</em> semua negara (bukan satu negara). Lebih kuat dari teori kehendak negara.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>📐 Mazhab Wina (Hans Kelsen)</h4>
+        <p>Ada hierarki hukum — dari norma tertinggi (<span class="kw">Grundnorm</span>) ke bawah. Grundnorm HI = asas <span class="kw2">Pacta Sunt Servanda</span>.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>🧬 Mazhab Perancis (Leon Duguit)</h4>
+        <p>Dasar mengikat HI adalah <em>fakta sosial</em> — manusia sebagai makhluk sosial BUTUH hidup bermasyarakat, termasuk antarnegara.</p>
+      </div>
+    </div>
+
+    <div class="info-box red">
+      <strong>Pandangan John Austin (Kritik HI):</strong> HI bukan hukum karena: (1) tidak ada kekuasaan eksekutif kuat, (2) tidak ada lembaga yudikatif &amp; polisi, (3) tidak bisa memaksa. <br>
+      <strong>Tapi dibantah:</strong> Tidak adanya badan pelaksana bukan berarti hukum tidak ada (contoh: hukum adat Indonesia berjalan tanpa badan formal). Lembaga yudikatif HI = <span class="kw">Mahkamah Internasional</span>.
+    </div>
+  </div>
+
+  <div class="card green">
+    <h3>💡 HI vs Hukum Dunia (World Law) — Jangan Tertukar!</h3>
+    <div class="table-wrap">
+    <table>
+      <tr><th>Aspek</th><th>Hukum Internasional</th><th>Hukum Dunia</th></tr>
+      <tr><td>Sistem</td><td>Koordinatif (setara)</td><td>Subordinatif (ada atasan)</td></tr>
+      <tr><td>Pemerintah Dunia</td><td>TIDAK ADA</td><td>ADA (world government)</td></tr>
+      <tr><td>Ketundukan</td><td>Sukarela</td><td>Dipaksa oleh pemerintah dunia</td></tr>
+      <tr><td>Status saat ini</td><td>NYATA ADA</td><td>Konsep teoritis (belum ada)</td></tr>
+    </table>
+    </div>
+  </div>
+
+  <!-- SOAL MODUL 1 -->
+  <div class="soal-header">
+    <h2>🎯 Soal Latihan — Modul 1</h2>
+    <p>Pilihan ganda, isian, dan kasus untuk Pendahuluan HI</p>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 1</span>
+      <p>Istilah "Hukum Internasional" pertama kali diperkenalkan oleh...</p>
+      <div class="option" onclick="pilih(this,'A','A')"><span class="opt-label">A</span> Hugo Grotius</div>
+      <div class="option" onclick="pilih(this,'B','A')"><span class="opt-label">B</span> Hans Kelsen</div>
+      <div class="option" onclick="pilih(this,'C','A')"><span class="opt-label">C</span> Jeremy Bentham</div>
+      <div class="option" onclick="pilih(this,'D','A')"><span class="opt-label">D</span> John Austin</div>
+      <div class="jawaban" id="j-A"><strong>✅ Jawaban: C — Jeremy Bentham</strong><br>Filsuf Inggris yang memperkenalkan istilah "International Law" pada akhir abad ke-18.</div>
+      <button class="btn-show" onclick="toggleJ('j-A')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 2</span>
+      <p>Perbedaan antara Hukum Internasional Publik dan Hukum Perdata Internasional terletak pada...</p>
+      <div class="option" onclick="pilih(this,'B2','B')"><span class="opt-label">A</span> Subyek hukumnya saja</div>
+      <div class="option" onclick="pilih(this,'B2','B')"><span class="opt-label">B</span> Sifat hubungan atau persoalan yang diaturnya (objeknya)</div>
+      <div class="option" onclick="pilih(this,'B2','B')"><span class="opt-label">C</span> Negara yang terlibat</div>
+      <div class="option" onclick="pilih(this,'B2','B')"><span class="opt-label">D</span> Jumlah pihak yang terlibat</div>
+      <div class="jawaban" id="j-B2"><strong>✅ Jawaban: B</strong><br>Perbedaannya pada SIFAT hubungan yang diatur (objek). HI Publik = NON-perdata, HPI = Perdata. Keduanya sama-sama mengatur hubungan lintas batas negara.</div>
+      <button class="btn-show" onclick="toggleJ('j-B2')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 3</span>
+      <p>Menurut John Austin, HI bukan merupakan hukum sejati karena...</p>
+      <div class="option" onclick="pilih(this,'C3','C')"><span class="opt-label">A</span> Tidak ada negara yang mematuhinya</div>
+      <div class="option" onclick="pilih(this,'C3','C')"><span class="opt-label">B</span> Dibuat oleh negara kuat saja</div>
+      <div class="option" onclick="pilih(this,'C3','C')"><span class="opt-label">C</span> Tidak ada aparat penegak (kekuasaan eksekutif, yudikatif, polisi) yang memaksa</div>
+      <div class="option" onclick="pilih(this,'C3','C')"><span class="opt-label">D</span> Tidak tertulis</div>
+      <div class="jawaban" id="j-C3"><strong>✅ Jawaban: C</strong><br>John Austin berpendapat HI bukan hukum karena tidak ada: (1) kekuasaan eksekutif kuat, (2) lembaga yudikatif-polisional, (3) kemampuan memaksa. Namun pandangan ini dibantah karena absennya badan penegak bukan berarti hukum tidak ada.</div>
+      <button class="btn-show" onclick="toggleJ('j-C3')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 4</span>
+      <p>Mazhab Wina yang dikembangkan Hans Kelsen berpendapat bahwa kaidah dasar (Grundnorm) dari Hukum Internasional adalah...</p>
+      <div class="option" onclick="pilih(this,'C4','A')"><span class="opt-label">A</span> Kedaulatan negara (souvereignty)</div>
+      <div class="option" onclick="pilih(this,'C4','A')"><span class="opt-label">B</span> Kehendak bersama negara-negara</div>
+      <div class="option" onclick="pilih(this,'C4','A')"><span class="opt-label">C</span> Hukum alam</div>
+      <div class="option" onclick="pilih(this,'C4','A')"><span class="opt-label">D</span> Asas Pacta Sunt Servanda</div>
+      <div class="jawaban" id="j-C4"><strong>✅ Jawaban: D — Pacta Sunt Servanda</strong><br>Menurut Kelsen, ada dan mengikatnya kaidah HI didasarkan pada kaidah yang lebih tinggi, hingga sampai puncak piramida = Grundnorm. Grundnorm HI = asas Pacta Sunt Servanda (perjanjian harus ditepati).</div>
+      <button class="btn-show" onclick="toggleJ('j-C4')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 1</span>
+      <p>Hukum Internasional yang berlaku terbatas pada suatu kawasan tertentu disebut <input class="fill-input" type="text" placeholder="..."> Internasional.</p>
+      <div class="jawaban" id="j-I1"><strong>✅ Jawaban: Regional</strong><br>Contoh: HI Regional Amerika Latin dengan konsep Continental Shelf yang kemudian menjadi HI Umum.</div>
+      <button class="btn-show" onclick="toggleJ('j-I1')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 2</span>
+      <p>Berbeda dengan Hukum Internasional yang bersifat koordinatif, "Hukum Dunia" (World Law) bersifat <input class="fill-input" type="text" placeholder="..."> karena ada pemerintahan dunia di atasnya.</p>
+      <div class="jawaban" id="j-I2"><strong>✅ Jawaban: Subordinatif</strong><br>Hukum Dunia = tertib hukum subordinatif, negara ibarat anggota federasi di bawah world government. HI = koordinatif, negara setara.</div>
+      <button class="btn-show" onclick="toggleJ('j-I2')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 3</span>
+      <p>Teori yang menyatakan bahwa dasar mengikatnya HI adalah fakta sosial bahwa manusia butuh hidup bermasyarakat dikemukakan oleh Mazhab <input class="fill-input" type="text" placeholder="..."> dengan tokohnya Leon Duguit.</p>
+      <div class="jawaban" id="j-I3"><strong>✅ Jawaban: Perancis (Mazhab Perancis)</strong></div>
+      <button class="btn-show" onclick="toggleJ('j-I3')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num essay">ESSAY 1</span>
+      <p>Jelaskan perbedaan antara Hukum Internasional Publik dan Hukum Perdata Internasional! Berikan contoh masing-masing!</p>
+      <div class="jawaban" id="j-E1">
+        <strong>✅ Jawaban Model:</strong><br>
+        <strong>HI Publik:</strong> Mengatur hubungan/persoalan yang melintas batas negara yang BUKAN bersifat perdata. Subyek utama = negara. Contoh: perjanjian perdamaian antar negara, hukum perang, hukum diplomatik, perjanjian lingkungan hidup internasional.<br><br>
+        <strong>HPI (Hukum Perdata Internasional):</strong> Mengatur hubungan perdata yang melintas batas negara. Subyek = individu/badan hukum dari berbagai negara. Contoh: kontrak jual-beli antara pengusaha Indonesia dengan pengusaha Jepang, pernikahan campuran WNI-WNA, warisan antarnegara.<br><br>
+        <strong>Persamaan:</strong> Keduanya mengatur hubungan yang melintas batas negara.<br>
+        <strong>Perbedaan kunci:</strong> Terletak pada SIFAT hubungan yang diatur (objeknya), bukan pada siapa pelakunya.
+      </div>
+      <button class="btn-show" onclick="toggleJ('j-E1')">Lihat Jawaban</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ===================== TAB 2: MODUL 2 ===================== -->
+<div id="tab2" class="tab-content">
+<div class="container">
+  <div class="sec-header">
+    <div class="sec-icon" style="background:#ccfbf1;">🌍</div>
+    <div>
+      <h2>Modul 2: Masyarakat Internasional</h2>
+      <p>Landasan sosiologis HI dan kedaulatan negara</p>
+    </div>
+  </div>
+
+  <div class="card teal">
+    <h3>🌿 Prinsip Dasar: Ubi Societas, Ibi Ius</h3>
+    <div class="info-box teal">
+      <strong>"Ubi Societas, Ibi Ius"</strong> — Dimana ada masyarakat, disana ada hukum.<br>
+      (Aristoteles, filsuf Yunani Kuno)
+    </div>
+    <p>Artinya: HI ada karena ada <em>masyarakat internasional</em>. Masyarakat internasional inilah yang menjadi <span class="kw">landasan sosiologis</span> (dasar sosial) dari Hukum Internasional.</p>
+  </div>
+
+  <div class="card blue">
+    <h3>🤔 Apa itu Masyarakat Internasional?</h3>
+    <p><strong>Definisi:</strong> Subyek-subyek hukum internasional yang saling mengadakan hubungan satu dengan lainnya.</p>
+    <div class="info-box blue">
+      Masyarakat internasional = <em>hubungan kehidupan antar manusia</em>, suatu kompleks kehidupan bersama yang terdiri dari aneka ragam masyarakat yang menjalin dengan erat.
+    </div>
+    <p>Penting dipahami: <span class="kw2">Adanya negara BELUM BERARTI ada masyarakat internasional</span> kalau negara-negara itu hidup sendiri-sendiri tanpa berinteraksi!</p>
+  </div>
+
+  <div class="card purple">
+    <h3>📋 Syarat Adanya Masyarakat Internasional</h3>
+    <p><strong>A. Syarat Materiil (fakta fisik):</strong></p>
+    <ol>
+      <li><strong>Adanya negara-negara merdeka dan berdaulat</strong> → Sudah terbukti, ada ratusan negara merdeka saat ini.</li>
+      <li><strong>Adanya hubungan tetap dan berkelanjutan</strong> antar negara → Tidak ada negara yang bisa mengisolasi diri (saling bergantung).</li>
+      <li><strong>Adanya hukum yang mengatur</strong> hubungan tersebut → Hukum diperlukan untuk kepastian hukum hubungan antarnegara.</li>
+    </ol>
+    <p style="margin-top:12px;"><strong>B. Syarat Non-Materiil:</strong></p>
+    <ul>
+      <li><strong>Adanya kesamaan asas-asas hukum</strong> yang diakui semua bangsa → <em>General Principles of Law Recognized by Civilized Nations</em></li>
+    </ul>
+  </div>
+
+  <div class="card orange">
+    <h3>⚜️ Kedaulatan (Sovereignty) dalam Masyarakat Internasional</h3>
+    <div class="info-box orange">
+      <strong>Kedaulatan</strong> = kekuasaan tertinggi (dari Latin "superanus" = "yang tertinggi"). Negara berdaulat tidak mengakui kekuasaan lain yang lebih tinggi darinya.
+    </div>
+    <p>Masalahnya: Kalau negara adalah kekuasaan tertinggi, bagaimana mungkin mereka mau tunduk pada HI?</p>
+    <div class="info-box green" style="margin-top:10px;">
+      <strong>Jawabannya:</strong> Kedaulatan punya BATAS! Kekuasaan negara berakhir di perbatasan negaranya. Saat kekuasaan negara A berakhir, kekuasaan negara B dimulai. Ini konsekuensi logis dari kedaulatan itu sendiri. Maka kedaulatan TIDAK bertentangan dengan HI.
+    </div>
+
+    <div class="grid3" style="margin-top:12px;">
+      <div class="info-box teal">
+        <strong>Kedaulatan</strong><br>Kekuasaan tertinggi dalam wilayah negara
+      </div>
+      <div class="info-box blue">
+        <strong>Kemerdekaan</strong><br>Negara berdaulat = merdeka dari negara lain
+      </div>
+      <div class="info-box purple">
+        <strong>Persamaan Derajat</strong><br>Semua negara sederajat, tidak ada yang lebih tinggi
+      </div>
+    </div>
+    <div class="info-box yellow" style="margin-top:10px;">
+      Ketiga konsep di atas (kedaulatan, kemerdekaan, persamaan derajat) bisa berjalan BERSAMA tanpa bertentangan!
+    </div>
+  </div>
+
+  <div class="card green">
+    <h3>🔄 Masyarakat Internasional dalam Peralihan</h3>
+    <p>Masyarakat internasional tidak statis — terus berubah! Perubahan besar setelah PD II:</p>
+    <ul>
+      <li>🗺️ <strong>Dekolonisasi</strong> → banyak negara baru merdeka dan berdaulat</li>
+      <li>💻 <strong>Kemajuan teknologi</strong> → batas negara "terasa" makin tipis, komunikasi global</li>
+      <li>🏛️ <strong>HI makin koordinatif</strong> → tidak ada lagi strata vertikal antar bangsa</li>
+      <li>⚠️ <strong>Kriminalitas kompleks</strong> → kejahatan lintas negara yang belum selalu ada regulasinya</li>
+    </ul>
+  </div>
+
+  <div class="case-box">
+    <div class="case-title">📎 Contoh Kasus: ASEAN sebagai Masyarakat Internasional Regional</div>
+    <p>ASEAN berdiri melalui Deklarasi Bangkok 1967, diprakarsai 5 negara: Indonesia, Malaysia, Singapura, Thailand, Filipina. Tujuannya: menciptakan kerjasama ekonomi, sosial, budaya, dan politik di kawasan Asia Tenggara.</p>
+    <p style="margin-top:8px;">Dalam interaksi antarnegara ASEAN, lahirlah berbagai regulasi sebagai landasan kerjasama — inilah contoh nyata bagaimana masyarakat internasional melahirkan Hukum Internasional.</p>
+    <div class="case-q"><strong>📝 Pertanyaan diskusi:</strong> Apakah terbentuknya Uni Eropa sebagai institusi supra-nasional bertentangan dengan konsep persamaan derajat antarnegara?</div>
+  </div>
+
+  <!-- SOAL MODUL 2 -->
+  <div class="soal-header">
+    <h2>🎯 Soal Latihan — Modul 2</h2>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 1</span>
+      <p>"Ubi Societas, Ibi Ius" berarti...</p>
+      <div class="option" onclick="pilih(this,'M2Q1','B')"><span class="opt-label">A</span> Hukum ada di mana-mana</div>
+      <div class="option" onclick="pilih(this,'M2Q1','B')"><span class="opt-label">B</span> Di mana ada masyarakat, di sana ada hukum</div>
+      <div class="option" onclick="pilih(this,'M2Q1','B')"><span class="opt-label">C</span> Hukum harus dibuat oleh masyarakat</div>
+      <div class="option" onclick="pilih(this,'M2Q1','B')"><span class="opt-label">D</span> Masyarakat tanpa hukum tidak bisa hidup</div>
+      <div class="jawaban" id="j-M2Q1"><strong>✅ Jawaban: B</strong><br>Ungkapan klasik Aristoteles: "Ubi Societas, Ibi Ius" = Di mana ada masyarakat, di sana ada hukum. Ini menjadi landasan bahwa HI ada karena ada masyarakat internasional.</div>
+      <button class="btn-show" onclick="toggleJ('j-M2Q1')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 2</span>
+      <p>Yang merupakan syarat NON-MATERIIL dari masyarakat internasional adalah...</p>
+      <div class="option" onclick="pilih(this,'M2Q2','D')"><span class="opt-label">A</span> Adanya negara merdeka dan berdaulat</div>
+      <div class="option" onclick="pilih(this,'M2Q2','D')"><span class="opt-label">B</span> Adanya hubungan tetap antar negara</div>
+      <div class="option" onclick="pilih(this,'M2Q2','D')"><span class="opt-label">C</span> Adanya hukum yang mengatur hubungan antarnegara</div>
+      <div class="option" onclick="pilih(this,'M2Q2','D')"><span class="opt-label">D</span> Adanya kesamaan asas-asas hukum yang diakui semua bangsa</div>
+      <div class="jawaban" id="j-M2Q2"><strong>✅ Jawaban: D</strong><br>Syarat materiil = (1) negara merdeka berdaulat, (2) hubungan tetap berkelanjutan, (3) ada hukum yang mengatur. Syarat non-materiil = adanya kesamaan asas/prinsip hukum (general principles of law recognized by civilized nations).</div>
+      <button class="btn-show" onclick="toggleJ('j-M2Q2')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 3</span>
+      <p>Mengapa kedaulatan negara TIDAK bertentangan dengan keberadaan Hukum Internasional?</p>
+      <div class="option" onclick="pilih(this,'M2Q3','C')"><span class="opt-label">A</span> Karena negara tidak benar-benar berdaulat</div>
+      <div class="option" onclick="pilih(this,'M2Q3','C')"><span class="opt-label">B</span> Karena HI dibuat oleh negara-negara sendiri</div>
+      <div class="option" onclick="pilih(this,'M2Q3','C')"><span class="opt-label">C</span> Karena kedaulatan terbatas pada batas wilayah negara itu sendiri, dan berakhir di mana kedaulatan negara lain dimulai</div>
+      <div class="option" onclick="pilih(this,'M2Q3','C')"><span class="opt-label">D</span> Karena HI lebih lemah dari kedaulatan negara</div>
+      <div class="jawaban" id="j-M2Q3"><strong>✅ Jawaban: C</strong><br>Kedaulatan punya batas wilayah. Saat batas ini tercapai, kedaulatan negara tetangga dimulai. Ini konsekuensi logis dari paham kedaulatan — sehingga kedaulatan justru mendukung pentingnya HI untuk mengatur interaksi di perbatasan tersebut.</div>
+      <button class="btn-show" onclick="toggleJ('j-M2Q3')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 1</span>
+      <p>Masyarakat internasional merupakan landasan <input class="fill-input" type="text" placeholder="..."> dari Hukum Internasional.</p>
+      <div class="jawaban" id="j-M2I1"><strong>✅ Jawaban: Sosiologis</strong><br>Masyarakat internasional adalah landasan sosiologis HI, artinya HI ada dan berlaku karena ada masyarakat internasional.</div>
+      <button class="btn-show" onclick="toggleJ('j-M2I1')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num essay">ESSAY 1</span>
+      <p>Jelaskan mengapa masyarakat internasional dikatakan sebagai landasan sosiologis terbentuknya Hukum Internasional!</p>
+      <div class="jawaban" id="j-M2E1">
+        <strong>✅ Jawaban Model:</strong><br>
+        Landasan sosiologis hukum adalah masyarakat. Artinya, hukum itu ada dan berlaku jika ada masyarakat (ubi societas, ibi ius). Hal yang sama berlaku untuk Hukum Internasional.<br><br>
+        Untuk membuktikan ada dan berlakunya HI, terlebih dahulu harus dibuktikan adanya masyarakat internasional. Masyarakat internasional ada karena terpenuhinya syarat: (1) adanya negara merdeka-berdaulat, (2) adanya hubungan tetap-berkelanjutan antarnegara, (3) adanya hukum yang mengaturnya, (4) adanya kesamaan asas hukum.<br><br>
+        Jadi, karena masyarakat internasional nyata-nyata ada, maka HI pun nyata-nyata ada dan berlaku. Masyarakat internasional menjadi dasar sosial (sosiologis) yang membenarkan keberadaan HI.
+      </div>
+      <button class="btn-show" onclick="toggleJ('j-M2E1')">Lihat Jawaban</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ===================== TAB 3: MODUL 3 ===================== -->
+<div id="tab3" class="tab-content">
+<div class="container">
+  <div class="sec-header">
+    <div class="sec-icon" style="background:#ede9fe;">📜</div>
+    <div>
+      <h2>Modul 3: Sejarah Perkembangan Hukum Internasional</h2>
+      <p>Dari zaman batu sampai era globalisasi</p>
+    </div>
+  </div>
+
+  <div class="info-box blue">
+    <strong>🎯 Ingat:</strong> Sejarah adalah bukti bahwa HI MEMANG ADA. Dengan melihat perjanjian-perjanjian kuno (tertulis maupun kebiasaan), kita bisa membuktikan HI sudah ada sejak ribuan tahun lalu.
+  </div>
+
+  <div class="card blue">
+    <h3>🏺 Era 1: Zaman Kuno</h3>
+
+    <div class="info-box teal">
+      <strong>Traktat Pertama di Dunia (±2100 SM):</strong> Traktat antara Ennamatum (pemimpin Lagash) dan pemimpin Umma di Mesopotamia, ditulis dalam bahasa Sumeria di atas batu — mengatur masalah perbatasan.
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>🇮🇳 India — Kitab Manu</h4>
+        <p>Ajaran Hindu menunjukkan nilai-nilai kemanusiaan tinggi: menekankan moralitas dan kebajikan dalam hubungan antarbangsa.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>🇨🇳 Cina — Kong Hu Cu</h4>
+        <p>Mencetuskan ide pembentukan perserikatan negara-negara Tiongkok — bisa dianggap setara konsep LBB pada masa modern!</p>
+      </div>
+      <div class="timeline-item">
+        <h4>🏛️ Yunani Kuno</h4>
+        <p>Sumbangan: sistem <strong>arbitrase</strong> (penyelesaian sengketa), dan pemikiran <strong>hukum alam</strong> (Aristoteles, kelompok Stoa dengan Zeno, Cicero). Kelemahan: Yunani merasa superior, kurang berinteraksi dengan bangsa lain.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>🦅 Romawi</h4>
+        <p>Mengenal <strong>Ius Civile</strong> (hukum untuk warga Romawi) dan <strong>Ius Gentium</strong> (hukum untuk orang asing), yang berkembang menjadi <strong>Ius Inter Gentium</strong>. Warisan penting: asas <span class="kw">Pacta Sunt Servanda</span>, konsep <em>occupatio, servitut, bona fides</em>, konsep <em>bellum justum et plum</em> (perang adil dan suci). Juga mengenal perbedaan penandatanganan dan ratifikasi, serta kekebalan duta.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card purple">
+    <h3>⛪ Era 2: Zaman Pertengahan (The Dark Ages)</h3>
+    <div class="info-box red">
+      <strong>⚠️ "Dark Ages":</strong> HI hampir tidak berkembang! Gereja Katolik mendominasi segalanya, rasio terpinggirkan. Ini mengapa zaman pertengahan disebut "masa kegelapan" bagi HI.
+    </div>
+    <ul>
+      <li>Eropa dikuasai sistem <strong>feodal</strong> (di atas ada Kaisar, di gereja ada Paus)</li>
+      <li>Hukum alam bertransformasi di bawah bendera Gereja Katolik (Thomas Aquinas)</li>
+      <li>Muncul konsep <strong>"perang adil"</strong> (bellum justum) dengan sentuhan ajaran Kristen</li>
+      <li>Tokoh penting: Jean Bodin (konsep kedaulatan), Hugo de Groot/Grotius (sekularisasi HI)</li>
+      <li>Perkembangan HI terjadi di luar jangkauan Gereja: Inggris, Perancis, Venesia, dll.</li>
+    </ul>
+    <div class="info-box blue" style="margin-top:10px;">
+      <strong>Buku penting zaman pertengahan:</strong> "The Tree of Battles" (1380) oleh Honore de Bonet; "Six Livres de la Republique" (1576) oleh Jean Bodin.
+    </div>
+  </div>
+
+  <div class="card orange">
+    <h3>☪️ Era 3: Hukum Internasional Islam (Siyar)</h3>
+    <div class="info-box orange">
+      <strong>Siyar</strong> = cabang dari Syariah yang mengatur hubungan negara Muslim dengan dunia luar (dan sesama negara Muslim).
+    </div>
+    <p><strong>Pengelompokan negara dalam siyar:</strong></p>
+    <ul>
+      <li>🟢 <strong>Darul Islam</strong> = wilayah/negara Islam</li>
+      <li>🔴 <strong>Darul Harb</strong> = negara Islam yang berada dalam kekuasaan non-Islam (musuh)</li>
+      <li>🟡 <strong>Darul Ahd</strong> = negara dalam keadaan perjanjian (damai)</li>
+    </ul>
+    <div class="info-box teal" style="margin-top:10px;">
+      <strong>Kontribusi Islam:</strong> Konferensi Asia-Afrika Bandung 1955 (Dasasila Bandung), pembentukan OKI (1973), serta prinsip-prinsip dalam siyar yang mirip sumber HI dalam Statuta ICJ.
+    </div>
+  </div>
+
+  <div class="card teal">
+    <h3>🔬 Era 4: Zaman Modern</h3>
+    <div class="info-box teal">
+      <strong>Tonggak terpenting:</strong> <span class="kw">Perjanjian Westphalia 1648</span> — mengakhiri Perang Tiga Puluh Tahun di Eropa. Lahirkan konsep kedaulatan modern dan pembedaan urusan domestik vs internasional.
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>Hugo Grotius (Hugo de Groot) — Bapak HI</h4>
+        <p>Bukunya: <em>"On the Law of War and Peace"</em> (1625, Paris). Memisahkan hukum bangsa-bangsa dari hukum alam. Melakukan sekularisasi HI — "hukum alam tetap berlaku meski Tuhan tidak ada."</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Samuel Pufendorf</h4>
+        <p>HI didasarkan pada hak-hak alamiah universal. Perang hanya sah setelah memenuhi syarat sangat ketat.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Richard Zouche — Perintis Positivisme</h4>
+        <p>Menekankan pentingnya "law of peace" (hukum saat damai) dibanding hukum perang.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Emerich de Vattel</h4>
+        <p>Memperkenalkan prinsip persamaan antarnegara. Bukunya menjadi acuan utama HI abad 18-19.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Abad 19 — Liga Bangsa-Bangsa (LBB)</h4>
+        <p>Pasca-PD I, lahirlah LBB melalui Traktat Versailles 1919. Berdiri pula PCIJ (Permanent Court of International Justice) di Den Haag tahun 1922. LBB gagal karena absennya AS dan Uni Soviet.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card green">
+    <h3>🌐 Era 5: Era Globalisasi — Pasca PD II</h3>
+    <ul>
+      <li>🏛️ <strong>PBB berdiri</strong> → sebagai pemrakarsa utama HI modern</li>
+      <li>🌏 <strong>Dekolonisasi</strong> → negara baru banyak bermunculan, peta politik internasional berubah</li>
+      <li>🤝 <strong>KAA Bandung 1955</strong> → 23 negara Asia-Afrika, melahirkan Gerakan Non-Blok</li>
+      <li>⚔️ <strong>Perang Dingin</strong> → konflik ideologi Kapitalis vs Sosialis</li>
+      <li>📈 <strong>HI makin luas</strong> → individu dan organisasi internasional diakui sebagai subyek HI</li>
+      <li>🌱 <strong>HAM &amp; ekonomi</strong> → WTO menjadi sentra hukum ekonomi internasional</li>
+    </ul>
+    <div class="info-box blue">
+      <strong>Perkembangan unik era globalisasi:</strong> HI disebut "borderless" karena teknologi membuat batas negara terasa makin kabur. Kejahatan lintas negara (cybercrime, terorisme) menjadi tantangan baru yang HI harus atur.
+    </div>
+  </div>
+
+  <!-- Soal Modul 3 -->
+  <div class="soal-header"><h2>🎯 Soal Latihan — Modul 3</h2></div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 1</span>
+      <p>Siapa yang dinobatkan sebagai "Bapak Hukum Internasional"?</p>
+      <div class="option" onclick="pilih(this,'S3Q1','B')"><span class="opt-label">A</span> Jeremy Bentham</div>
+      <div class="option" onclick="pilih(this,'S3Q1','B')"><span class="opt-label">B</span> Hugo Grotius (Hugo de Groot)</div>
+      <div class="option" onclick="pilih(this,'S3Q1','B')"><span class="opt-label">C</span> Hans Kelsen</div>
+      <div class="option" onclick="pilih(this,'S3Q1','B')"><span class="opt-label">D</span> Emerich de Vattel</div>
+      <div class="jawaban" id="j-S3Q1"><strong>✅ Jawaban: B — Hugo Grotius</strong><br>Hugo de Groot (Grotius), penulis Belanda, dinobatkan sebagai Bapak HI karena melakukan sekularisasi HI dan menulis "On the Law of War and Peace" (1625) yang sangat berpengaruh.</div>
+      <button class="btn-show" onclick="toggleJ('j-S3Q1')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 2</span>
+      <p>Perjanjian yang menandai lahirnya konsep kedaulatan negara modern dan mengakhiri Perang Tiga Puluh Tahun adalah...</p>
+      <div class="option" onclick="pilih(this,'S3Q2','C')"><span class="opt-label">A</span> Perjanjian Versailles 1919</div>
+      <div class="option" onclick="pilih(this,'S3Q2','C')"><span class="opt-label">B</span> Perjanjian Lateran 1929</div>
+      <div class="option" onclick="pilih(this,'S3Q2','C')"><span class="opt-label">C</span> Perjanjian Westphalia 1648</div>
+      <div class="option" onclick="pilih(this,'S3Q2','C')"><span class="opt-label">D</span> Konvensi Den Haag 1907</div>
+      <div class="jawaban" id="j-S3Q2"><strong>✅ Jawaban: C — Perjanjian Westphalia 1648</strong><br>Perjanjian ini mengakhiri Perang Tiga Puluh Tahun (perang agama di Eropa) dan melahirkan konsep kedaulatan negara modern. Ini juga menjadi titik awal pembedaan antara urusan domestik dan internasional.</div>
+      <button class="btn-show" onclick="toggleJ('j-S3Q2')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 3</span>
+      <p>Zaman Pertengahan disebut "Dark Ages" dalam sejarah HI karena...</p>
+      <div class="option" onclick="pilih(this,'S3Q3','A')"><span class="opt-label">A</span> HI hampir tidak berkembang karena peran keagamaan mendominasi secara berlebihan dan rasio terpinggirkan</div>
+      <div class="option" onclick="pilih(this,'S3Q3','A')"><span class="opt-label">B</span> Tidak ada perang yang terjadi</div>
+      <div class="option" onclick="pilih(this,'S3Q3','A')"><span class="opt-label">C</span> HI berkembang sangat pesat namun tidak tercatat</div>
+      <div class="option" onclick="pilih(this,'S3Q3','A')"><span class="opt-label">D</span> Semua negara mengisolasi diri</div>
+      <div class="jawaban" id="j-S3Q3"><strong>✅ Jawaban: A</strong><br>Zaman pertengahan = dominasi Gereja Katolik yang berlebihan. Rasio terpinggirkan, HI stagnan/mundur. Perkembangan HI hanya terjadi di luar jangkauan kekuasaan Gereja.</div>
+      <button class="btn-show" onclick="toggleJ('j-S3Q3')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 4</span>
+      <p>Liga Bangsa-Bangsa (LBB) gagal berfungsi efektif terutama karena...</p>
+      <div class="option" onclick="pilih(this,'S3Q4','B')"><span class="opt-label">A</span> Terlalu banyak anggota</div>
+      <div class="option" onclick="pilih(this,'S3Q4','B')"><span class="opt-label">B</span> Absennya Amerika Serikat dan Uni Soviet sehingga menjadi milik Eropa eksklusif</div>
+      <div class="option" onclick="pilih(this,'S3Q4','B')"><span class="opt-label">C</span> Tidak memiliki tujuan yang jelas</div>
+      <div class="option" onclick="pilih(this,'S3Q4','B')"><span class="opt-label">D</span> Tidak didukung oleh Traktat Versailles</div>
+      <div class="jawaban" id="j-S3Q4"><strong>✅ Jawaban: B</strong><br>LBB gagal karena AS tidak mau bergabung dan Uni Soviet dikeluarkan setelah invasi Finlandia. LBB juga gagal mencegah agresi Jepang ke Cina, Italia ke Ethiopia, dan agresi Jerman. Kegagalan LBB berujung pada PD II.</div>
+      <button class="btn-show" onclick="toggleJ('j-S3Q4')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 1</span>
+      <p>Traktat pertama yang ditemukan dalam sejarah HI ditandatangani di daerah <input class="fill-input" type="text" placeholder="..."> sekitar 2100 SM, antara pemimpin Lagash dan Umma.</p>
+      <div class="jawaban" id="j-S3I1"><strong>✅ Jawaban: Mesopotamia</strong><br>Traktat ini ditulis di atas batu dalam bahasa Sumeria dan membahas masalah perbatasan antara dua negara kota tersebut.</div>
+      <button class="btn-show" onclick="toggleJ('j-S3I1')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 2</span>
+      <p>Dalam hukum Islam, pengelompokan wilayah yang berada dalam kondisi perjanjian damai (bukan perang) disebut <input class="fill-input" type="text" placeholder="...">.</p>
+      <div class="jawaban" id="j-S3I2"><strong>✅ Jawaban: Darul Ahd</strong><br>Dalam Siyar: Darul Islam (negara Islam), Darul Harb (dalam kekuasaan non-Islam/musuh), Darul Ahd (dalam keadaan perjanjian/damai).</div>
+      <button class="btn-show" onclick="toggleJ('j-S3I2')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num essay">ESSAY: Perbandingan Era</span>
+      <p>Buatlah perbandingan singkat perkembangan HI pada: (1) Zaman Kuno, (2) Zaman Pertengahan, (3) Zaman Modern!</p>
+      <div class="jawaban" id="j-S3E1">
+        <strong>✅ Jawaban Model:</strong><br>
+        <strong>Zaman Kuno:</strong> HI sudah ada tapi belum sistematis. Bukti: traktat Mesopotamia ±2100 SM, perjanjian Ramses II dengan Hittites, Kode Hammurabi. Muncul konsep arbitrase (Yunani), ius gentium (Romawi), pacta sunt servanda, bellum justum.<br><br>
+        <strong>Zaman Pertengahan (Dark Ages):</strong> HI hampir tidak berkembang. Gereja mendominasi, rasio terpinggirkan. Perkembangan hanya di sekitar tema perang: konsep "perang adil" dengan sentuhan Kristen. Positifnya: mulai ada upaya sekularisasi (Jean Bodin, Grotius).<br><br>
+        <strong>Zaman Modern:</strong> HI berkembang pesat. Perjanjian Westphalia 1648 sebagai tonggak kedaulatan modern. Grotius melakukan sekularisasi. Abad 19: HI jadi bidang studi serius. Abad 20: PD I → LBB, PD II → PBB, HI makin kompleks mencakup HAM, ekonomi internasional, dll.
+      </div>
+      <button class="btn-show" onclick="toggleJ('j-S3E1')">Lihat Jawaban</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ===================== TAB 4: MODUL 4 ===================== -->
+<div id="tab4" class="tab-content">
+<div class="container">
+  <div class="sec-header">
+    <div class="sec-icon" style="background:#ffedd5;">📚</div>
+    <div>
+      <h2>Modul 4: Sumber Hukum Internasional</h2>
+      <p>Darimana HI berasal? Pasal 38 ICJ Statute adalah kuncinya!</p>
+    </div>
+  </div>
+
+  <div class="card orange">
+    <h3>📖 Pengertian Sumber Hukum</h3>
+    <div class="grid3">
+      <div class="info-box blue">
+        <strong>Materiil</strong><br>Bahan/materi yang membentuk substansi hukum (ekonomi, politik, sosial budaya, dll)
+      </div>
+      <div class="info-box teal">
+        <strong>Causa</strong><br>Proses/sebab-akibat terbentuknya hukum
+      </div>
+      <div class="info-box orange">
+        <strong>Formil</strong><br>Wujud nyata dari hukum itu sendiri (bentuk tertulis/tidak tertulis) ← <strong>INI YANG DIBAHAS!</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="card blue">
+    <h3>⚖️ PASAL 38 STATUTA MAHKAMAH INTERNASIONAL (WAJIB HAFAL!)</h3>
+    <div class="info-box yellow">
+      <strong>📌 Ini adalah sumber HI yang diakui secara resmi!</strong> Pasal 38 ayat (1) Statuta ICJ menyebutkan 4 sumber HI:
+    </div>
+    <div class="grid2">
+      <div class="info-box blue">
+        <strong>🔵 PRIMER/UTAMA:</strong><br>
+        a. International Conventions (Perjanjian Internasional)<br>
+        b. International Custom (Kebiasaan Internasional)<br>
+        c. General Principles of Law (Prinsip Hukum Umum)
+      </div>
+      <div class="info-box purple">
+        <strong>🟣 SUBSIDAIR/PELENGKAP:</strong><br>
+        d. Judicial Decisions (Putusan Pengadilan)<br>
+        &amp; Teachings of Publicists (Doktrin/ajaran ahli hukum)
+      </div>
+    </div>
+    <div class="info-box red" style="margin-top:10px;">
+      <strong>⚠️ Ingat urutan ini!</strong> Perjanjian → Kebiasaan → Prinsip Umum → Putusan + Doktrin
+    </div>
+  </div>
+
+  <div class="card teal">
+    <h3>📜 3.1 Perjanjian Internasional (Treaty/Konvensi)</h3>
+    <p><strong>Definisi:</strong> Perjanjian antara subyek-subyek HI yang menimbulkan hak dan kewajiban menurut HI.</p>
+
+    <div class="grid2">
+      <div class="info-box blue">
+        <strong>Law Making Treaty</strong><br>Perjanjian TERBUKA/UMUM — bisa diikuti negara lain yang tidak ikut merancangnya. Mengatur kepentingan seluruh/sebagian besar masyarakat internasional.<br>
+        Contoh: UNCLOS 1982 (Konvensi Hukum Laut)
+      </div>
+      <div class="info-box teal">
+        <strong>Treaty Contract</strong><br>Perjanjian KHUSUS/TERTUTUP — hanya berlaku antara pihak yang bersangkutan saja.<br>
+        Contoh: Perjanjian batas wilayah Indonesia-Australia
+      </div>
+    </div>
+
+    <p style="margin-top:14px;"><strong>Ditinjau dari jumlah pihak:</strong></p>
+    <div class="table-wrap">
+    <table>
+      <tr><th>Aspek</th><th>Bilateral</th><th>Multilateral</th></tr>
+      <tr><td>Jumlah pihak</td><td>2 negara</td><td>3+ negara</td></tr>
+      <tr><td>Reservasi</td><td>Tidak praktis (hanya 2 pilihan: tunduk penuh atau tolak)</td><td>Diperbolehkan (tidak mengubah perjanjian induk)</td></tr>
+      <tr><td>Sifat kaidah</td><td>Selalu khusus, tertutup</td><td>Bisa umum atau khusus, terbuka atau tertutup</td></tr>
+    </table>
+    </div>
+
+    <p style="margin-top:14px;"><strong>Tahap pembentukan perjanjian (Konvensi Wina 1969):</strong></p>
+    <div class="grid2">
+      <div class="info-box teal">
+        <strong>2 Tahap:</strong><br>
+        (1) Perundingan (Negotiation)<br>
+        (2) Penandatanganan (Signature)
+      </div>
+      <div class="info-box blue">
+        <strong>3 Tahap (untuk perjanjian penting):</strong><br>
+        (1) Perundingan<br>
+        (2) Penandatanganan<br>
+        (3) Ratifikasi/Pengesahan
+      </div>
+    </div>
+
+    <div class="info-box orange" style="margin-top:10px;">
+      <strong>Berakhirnya Perjanjian:</strong> Habis waktu, tujuan tercapai, ada perjanjian baru, sepakat mengakhiri, salah satu pihak tarik diri, objek musnah, atau salah satu pihak musnah/hapus.
+    </div>
+  </div>
+
+  <div class="card purple">
+    <h3>🌊 3.2 Hukum Kebiasaan Internasional (Custom)</h3>
+    <div class="info-box purple">
+      <strong>Definisi:</strong> "International Custom, as evidence of a general practice accepted as law" (Pasal 38 ICJ Statute)
+    </div>
+    <p><strong>Dua elemen WAJIB ada dalam kebiasaan internasional:</strong></p>
+    <div class="grid2">
+      <div class="info-box blue">
+        <strong>1. Praktek Negara-negara</strong><br>
+        Unsur yang dinilai:<br>
+        • <span class="kw">Duration</span> = sudah dilakukan lama & terus-menerus<br>
+        • <span class="kw">Uniformity</span> = seragam/konsisten di berbagai kesempatan<br>
+        • <span class="kw">Generality</span> = diakui secara umum oleh banyak negara
+      </div>
+      <div class="info-box purple">
+        <strong>2. Opinio Juris Sive Necessitatis</strong><br>
+        = Keyakinan subjektif negara bahwa kebiasaan itu MEMANG HUKUM yang mengikat (bukan hanya kebiasaan biasa/sopan santun)
+      </div>
+    </div>
+    <div class="info-box teal" style="margin-top:10px;">
+      <strong>Bukti kebiasaan internasional:</strong> Korespondensi diplomatik, pernyataan kebijakan, siaran pers, pendapat pejabat berwenang, undang-undang nasional, putusan pengadilan nasional, resolusi Sidang Umum PBB, dll.
+    </div>
+    <div class="info-box yellow" style="margin-top:8px;">
+      <strong>Persistent Objector:</strong> Negara yang terus-menerus menolak suatu kebiasaan internasional. Penolakan harus jelas dan konsisten. Tapi negara yang DIAM saat kebiasaan terbentuk TIDAK BISA menghindari berlakunya kebiasaan tersebut!
+    </div>
+  </div>
+
+  <div class="card green">
+    <h3>⚡ 3.3 Prinsip-Prinsip Hukum Umum</h3>
+    <p>Digunakan saat perjanjian internasional dan kebiasaan tidak mencukupi — agar pengadilan tidak "non liquet" (menolak mengadili karena tidak ada aturan).</p>
+    <p>Contoh prinsip hukum umum:</p>
+    <div class="grid2">
+      <div class="info-box green">
+        ✓ Asas <strong>Pacta Sunt Servanda</strong> (janji harus ditepati)<br>
+        ✓ Asas <strong>Bona Fides</strong> (itikad baik)<br>
+        ✓ Asas <strong>Non-Intervensi</strong>
+      </div>
+      <div class="info-box teal">
+        ✓ Asas kelangsungan negara<br>
+        ✓ Penghormatan kemerdekaan negara<br>
+        ✓ Asas <em>adimplenti non est adiplendum</em>
+      </div>
+    </div>
+  </div>
+
+  <div class="card red">
+    <h3>📋 3.4 Putusan Pengadilan & Doktrin (Subsidair)</h3>
+    <div class="info-box red">
+      <strong>Penting!</strong> Pasal 59 Statuta ICJ: Putusan ICJ hanya mengikat para pihak dalam kasus itu saja — tidak ada prinsip preseden seperti di negara Common Law. Jadi putusan pengadilan hanya bersifat PERSUASIF, bukan mengikat secara formal.
+    </div>
+    <div class="grid2">
+      <div class="info-box orange">
+        <strong>Yurisprudensi (Putusan Pengadilan)</strong><br>
+        Meski tidak mengikat, putusan ICJ sangat berpengaruh terhadap perkembangan HI. Keputusan pengadilan nasional = acuan tidak langsung adanya opinio juris.
+      </div>
+      <div class="info-box purple">
+        <strong>Doktrin (Ajaran Ahli)</strong><br>
+        Pendapat sarjana hukum terkemuka. Bersifat pribadi dan subjektif, tapi bila banyak ahli setuju → bisa membentuk kebiasaan baru. Contoh: pendapat anggota ILC (International Law Commission) PBB.
+      </div>
+    </div>
+    <div class="info-box teal" style="margin-top:10px;">
+      <strong>Bonus — Resolusi Majelis Umum PBB:</strong> Secara formal hanya "anjuran" (Pasal 10 Piagam PBB), tapi praktiknya sangat berpengaruh dan ada yang menyebut perannya sebagai "quasi legislative." Contoh: UDHR (Deklarasi HAM Universal) 10 Desember 1948.
+    </div>
+  </div>
+
+  <div class="case-box">
+    <div class="case-title">📎 Contoh Kasus: UNCLOS 1982 sebagai Sumber HI</div>
+    <p>Konvensi Hukum Laut PBB 1982 (UNCLOS) adalah law making treaty yang dihasilkan dari Konferensi PBB tentang Hukum Laut ke-3 (1973-1982). Mendefinisikan hak & tanggung jawab negara dalam penggunaan lautan. Mulai berlaku 1994 setelah Guyana jadi negara ke-60 meratifikasi. Saat ini 158 negara + Uni Eropa telah bergabung.</p>
+    <div class="case-q"><strong>📝 Analisis:</strong> UNCLOS merupakan contoh sumber HI berupa perjanjian internasional (multilateral, law making treaty). Ia menggantikan perjanjian hukum laut 1958 — menunjukkan bagaimana sumber HI bisa berakhir jika ada perjanjian baru yang menggantikan.</div>
+  </div>
+
+  <!-- Soal Modul 4 -->
+  <div class="soal-header"><h2>🎯 Soal Latihan — Modul 4</h2></div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 1</span>
+      <p>Berdasarkan Pasal 38 Statuta ICJ, yang merupakan sumber HI UTAMA (primer) adalah...</p>
+      <div class="option" onclick="pilih(this,'S4Q1','A')"><span class="opt-label">A</span> Perjanjian internasional, kebiasaan internasional, dan prinsip hukum umum</div>
+      <div class="option" onclick="pilih(this,'S4Q1','A')"><span class="opt-label">B</span> Perjanjian internasional dan putusan pengadilan</div>
+      <div class="option" onclick="pilih(this,'S4Q1','A')"><span class="opt-label">C</span> Kebiasaan internasional dan doktrin</div>
+      <div class="option" onclick="pilih(this,'S4Q1','A')"><span class="opt-label">D</span> Hanya perjanjian internasional saja</div>
+      <div class="jawaban" id="j-S4Q1"><strong>✅ Jawaban: A</strong><br>Sumber HI primer (Pasal 38): (a) Konvensi/Perjanjian Internasional, (b) Kebiasaan Internasional, (c) Prinsip Hukum Umum. Sedangkan (d) Putusan Pengadilan + Doktrin = sumber subsidair/pelengkap.</div>
+      <button class="btn-show" onclick="toggleJ('j-S4Q1')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 2</span>
+      <p>Opinio Juris Sive Necessitatis adalah...</p>
+      <div class="option" onclick="pilih(this,'S4Q2','C')"><span class="opt-label">A</span> Kebiasaan yang dilakukan negara-negara secara terus menerus</div>
+      <div class="option" onclick="pilih(this,'S4Q2','C')"><span class="opt-label">B</span> Prinsip hukum umum yang berlaku di semua negara</div>
+      <div class="option" onclick="pilih(this,'S4Q2','C')"><span class="opt-label">C</span> Keyakinan subjektif negara bahwa kebiasaan tertentu adalah hukum yang mengikat dan wajib dipatuhi</div>
+      <div class="option" onclick="pilih(this,'S4Q2','C')"><span class="opt-label">D</span> Putusan pengadilan internasional yang bersifat mengikat</div>
+      <div class="jawaban" id="j-S4Q2"><strong>✅ Jawaban: C</strong><br>Opinio Juris = pengakuan subjektif + kehendak untuk mematuhi kebiasaan tertentu SEBAGAI HUKUM (bukan sekadar basa-basi atau kesopanan). Ini yang membedakan kebiasaan hukum internasional dari sekadar kebiasaan biasa.</div>
+      <button class="btn-show" onclick="toggleJ('j-S4Q2')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 3</span>
+      <p>Perjanjian yang hanya mengatur kepentingan para pihak yang merancangnya saja disebut...</p>
+      <div class="option" onclick="pilih(this,'S4Q3','D')"><span class="opt-label">A</span> Law Making Treaty</div>
+      <div class="option" onclick="pilih(this,'S4Q3','D')"><span class="opt-label">B</span> Perjanjian Multilateral</div>
+      <div class="option" onclick="pilih(this,'S4Q3','D')"><span class="opt-label">C</span> Perjanjian Regional</div>
+      <div class="option" onclick="pilih(this,'S4Q3','D')"><span class="opt-label">D</span> Treaty Contract</div>
+      <div class="jawaban" id="j-S4Q3"><strong>✅ Jawaban: D — Treaty Contract</strong><br>Treaty contract = perjanjian khusus/tertutup yang hanya melahirkan hak-kewajiban bagi pihak yang bersangkutan saja. Contoh: perjanjian batas wilayah bilateral.</div>
+      <button class="btn-show" onclick="toggleJ('j-S4Q3')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 4</span>
+      <p>Prinsip hukum yang menyatakan "pengadilan tidak boleh menolak mengadili karena tidak ada aturan yang mengatur" disebut larangan...</p>
+      <div class="option" onclick="pilih(this,'S4Q4','B')"><span class="opt-label">A</span> Ultra Vires</div>
+      <div class="option" onclick="pilih(this,'S4Q4','B')"><span class="opt-label">B</span> Non Liquet</div>
+      <div class="option" onclick="pilih(this,'S4Q4','B')"><span class="opt-label">C</span> Pacta Sunt Servanda</div>
+      <div class="option" onclick="pilih(this,'S4Q4','B')"><span class="opt-label">D</span> Bona Fides</div>
+      <div class="jawaban" id="j-S4Q4"><strong>✅ Jawaban: B — Non Liquet</strong><br>"Non liquet" = menolak mengadili perkara karena tidak ada hukum yang mengatur. Prinsip hukum umum hadir justru untuk mencegah non liquet — agar ICJ selalu bisa mengadili perkara yang diajukan kepadanya.</div>
+      <button class="btn-show" onclick="toggleJ('j-S4Q4')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 5</span>
+      <p>Menurut Pasal 59 Statuta ICJ, putusan Mahkamah Internasional...</p>
+      <div class="option" onclick="pilih(this,'S4Q5','A')"><span class="opt-label">A</span> Hanya mengikat para pihak dalam kasus tersebut saja (tidak ada prinsip preseden)</div>
+      <div class="option" onclick="pilih(this,'S4Q5','A')"><span class="opt-label">B</span> Mengikat semua negara anggota PBB</div>
+      <div class="option" onclick="pilih(this,'S4Q5','A')"><span class="opt-label">C</span> Menjadi preseden untuk kasus-kasus serupa</div>
+      <div class="option" onclick="pilih(this,'S4Q5','A')"><span class="opt-label">D</span> Bisa diabaikan oleh negara yang kalah</div>
+      <div class="jawaban" id="j-S4Q5"><strong>✅ Jawaban: A</strong><br>Pasal 59: keputusan ICJ tidak mengikat kecuali antara para pihak dan dalam kasus itu. ICJ tidak mengakui prinsip preseden — berbeda dari sistem Common Law. Putusan ICJ hanya memiliki nilai persuasif.</div>
+      <button class="btn-show" onclick="toggleJ('j-S4Q5')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 1</span>
+      <p>Dua elemen yang harus ada dalam hukum kebiasaan internasional adalah: (1) Praktek Negara-negara, dan (2) <input class="fill-input" type="text" placeholder="...">.</p>
+      <div class="jawaban" id="j-S4I1"><strong>✅ Jawaban: Opinio Juris Sive Necessitatis</strong></div>
+      <button class="btn-show" onclick="toggleJ('j-S4I1')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 2</span>
+      <p>Perjanjian yang bisa diikuti oleh negara-negara lain yang tidak ikut merancangnya disebut <input class="fill-input" type="text" placeholder="..."> Treaty.</p>
+      <div class="jawaban" id="j-S4I2"><strong>✅ Jawaban: Law Making</strong><br>Law Making Treaty = perjanjian terbuka/umum yang mengatur kepentingan masyarakat internasional luas, bukan hanya pihak yang merancangnya.</div>
+      <button class="btn-show" onclick="toggleJ('j-S4I2')">Lihat Jawaban</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ===================== TAB 5: MODUL 5 ===================== -->
+<div id="tab5" class="tab-content">
+<div class="container">
+  <div class="sec-header">
+    <div class="sec-icon" style="background:#fce7f3;">⚖️</div>
+    <div>
+      <h2>Modul 5: Hubungan HI dan Hukum Nasional (HN)</h2>
+      <p>Monisme vs Dualisme dan praktik negara-negara</p>
+    </div>
+  </div>
+
+  <div class="card pink">
+    <h3>❓ Mengapa Hubungan HI-HN Rumit?</h3>
+    <div class="info-box pink">
+      Negara punya kedaulatan → berwenang buat HN sendiri. Tapi negara juga anggota masyarakat internasional → terikat HI. Nah, kalau HI dan HN BERTENTANGAN, mana yang menang?
+    </div>
+    <p>Inilah inti perdebatan antara teori Monisme dan Dualisme!</p>
+  </div>
+
+  <div class="card blue">
+    <h3>🔵 Teori Monisme</h3>
+    <div class="info-box blue">
+      <strong>Inti gagasan:</strong> HI dan HN adalah satu kesatuan sistem hukum yang tidak terpisah. Tokoh utama: <span class="kw">Hans Kelsen</span>.
+    </div>
+    <p>Menurut Kelsen, tidak perlu membedakan HI dan HN karena:</p>
+    <ol>
+      <li>Objeknya sama: tingkah laku individu</li>
+      <li>Sama-sama memuat perintah untuk ditaati</li>
+      <li>Keduanya bagian dari satu konsepsi hukum</li>
+    </ol>
+    <div class="grid2" style="margin-top:12px;">
+      <div class="info-box blue">
+        <strong>Monisme dengan Primat HI</strong><br>
+        HI lebih tinggi dari HN. HN harus sesuai HI. Jika bertentangan, HN bisa dikesampingkan. (Pandangan Hans Kelsen)
+      </div>
+      <div class="info-box teal">
+        <strong>Monisme dengan Primat HN</strong><br>
+        HN lebih tinggi. HI hanyalah lanjutan dari HN untuk urusan luar negeri. HI bersumber dari HN.
+      </div>
+    </div>
+  </div>
+
+  <div class="card purple">
+    <h3>🟣 Teori Dualisme</h3>
+    <div class="info-box purple">
+      <strong>Inti gagasan:</strong> HI dan HN adalah dua sistem hukum yang BERBEDA dan TERPISAH. Tokoh: <span class="kw">Triepel</span> dan <span class="kw">Anzilotti</span>.
+    </div>
+    <div class="table-wrap">
+    <table>
+      <tr><th>Aspek</th><th>HI</th><th>HN</th></tr>
+      <tr><td>Sumber</td><td>Kehendak bersama negara-negara + kebiasaan internasional</td><td>Kebiasaan domestik + UU nasional</td></tr>
+      <tr><td>Subyek</td><td>Negara-negara (+ perkembangan: org. internasional, individu)</td><td>Individu dalam satu negara</td></tr>
+      <tr><td>Kekuatan mengikat</td><td>Horizontal, pasif</td><td>Penuh dan sempurna, aktif</td></tr>
+      <tr><td>Penegakan</td><td>Tidak ada aparat pemaksa yang efektif</td><td>Ada polisi, pengadilan, eksekutif</td></tr>
+    </table>
+    </div>
+    <div class="info-box purple" style="margin-top:10px;">
+      Karena HI dan HN berbeda, HI tidak bisa langsung berlaku di dalam negara. Harus melalui proses transformasi (dijadikan HN dulu) baru bisa berlaku domestik.
+    </div>
+  </div>
+
+  <div class="card orange">
+    <h3>⚡ Teori-Teori Lainnya</h3>
+    <div class="grid2">
+      <div class="info-box blue">
+        <strong>Teori Koordinasi</strong><br>
+        HI dan HN bekerja di lingkungan berbeda dan tidak saling berkonflik. Masing-masing punya supremasi di lapangannya sendiri.
+      </div>
+      <div class="info-box teal">
+        <strong>Teori Transformasi</strong><br>
+        HI harus melalui "alih bentuk" (transformasi) menjadi HN dulu sebelum berlaku di dalam negara — baik formal maupun substansial.
+      </div>
+      <div class="info-box purple">
+        <strong>Teori Delegasi</strong><br>
+        Implementasi HI diserahkan kepada masing-masing negara / HN.
+      </div>
+      <div class="info-box orange">
+        <strong>Teori Harmonisasi</strong><br>
+        HI dan HN harus ditafsirkan sedemikian rupa agar saling harmonis, tidak bertentangan.
+      </div>
+    </div>
+  </div>
+
+  <div class="card green">
+    <h3>🌍 Praktek Negara-Negara</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>🇬🇧 Inggris — Doktrin Inkorporasi</h4>
+        <p>"International law is the law of the land" = HI adalah hukum negara. HI kebiasaan berlaku langsung selama tidak bertentangan dengan UU dan setelah ada keputusan Mahkamah tertinggi.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>🇺🇸 Amerika Serikat</h4>
+        <p>Hampir sama dengan Inggris, tapi perbedaannya pada traktat. Di AS, traktat yang diratifikasi menjadi "the Supreme Law of the Land" (setara dengan konstitusi).</p>
+      </div>
+      <div class="timeline-item">
+        <h4>🇮🇩 Indonesia</h4>
+        <p>UUD 1945 tidak secara eksplisit menyatakan HI atau HN yang lebih utama. Indonesia menganut sikap wajar: mengakui HI tapi tidak begitu saja menerima HI tradisional yang tidak menguntungkan. Contoh: perjuangan konsep wawasan nusantara (archipelago), hak atas landas kontinen, dll.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card teal">
+    <h3>📊 Perbandingan Monisme vs Dualisme</h3>
+    <div class="table-wrap">
+    <table>
+      <tr><th>Aspek</th><th>Monisme</th><th>Dualisme</th></tr>
+      <tr><td>Sistem hukum</td><td>SATU (HI + HN menyatu)</td><td>DUA (HI ≠ HN, terpisah)</td></tr>
+      <tr><td>Hubungan</td><td>HI = lanjutan HN / HN tunduk HI</td><td>HI dan HN saling independen</td></tr>
+      <tr><td>Penerapan HI di dalam negeri</td><td>Langsung berlaku (self-executing)</td><td>Harus transformasi ke HN dulu</td></tr>
+      <tr><td>Tokoh</td><td>Hans Kelsen</td><td>Triepel, Anzilotti</td></tr>
+      <tr><td>Kelemahan</td><td>Mengabaikan perbedaan sistem hukum tiap negara</td><td>HI sulit diterapkan, lemah di domestik</td></tr>
+    </table>
+    </div>
+  </div>
+
+  <div class="case-box">
+    <div class="case-title">📎 Contoh Kasus: Nasionalisasi Perusahaan Belanda oleh Indonesia</div>
+    <p>Pada 31 Desember 1958, Indonesia mengeluarkan UU Nasionalisasi No. 86/1957 untuk mengambil alih perusahaan Belanda di Indonesia. Belanda tidak mempermasalahkan keabsahan UU-nya, tapi mempersoalkan pembayaran ganti rugi yang dinilai tidak sesuai prinsip internasional "prompt, effective, and adequate."</p>
+    <p style="margin-top:8px;">Indonesia memperkenalkan prinsip baru: ganti rugi disesuaikan kemampuan negara. Belanda mengajukan ke Pengadilan Bremen — dan pengadilan menerima dalil Indonesia sebagai sumber hukum positif baru!</p>
+    <div class="case-q"><strong>📝 Analisis:</strong> Ini contoh bagaimana Indonesia mengesampingkan prinsip HI dan memperkenalkan norma baru melalui yurisprudensi — menunjukkan dinamika hubungan HI dan HN dalam praktik.</div>
+  </div>
+
+  <!-- Soal Modul 5 -->
+  <div class="soal-header"><h2>🎯 Soal Latihan — Modul 5</h2></div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 1</span>
+      <p>Menurut teori Monisme yang mengutamakan HI (pandangan Kelsen), apabila HN bertentangan dengan HI maka...</p>
+      <div class="option" onclick="pilih(this,'S5Q1','B')"><span class="opt-label">A</span> HI yang harus mengalah</div>
+      <div class="option" onclick="pilih(this,'S5Q1','B')"><span class="opt-label">B</span> HN bisa dikesampingkan karena HI lebih tinggi</div>
+      <div class="option" onclick="pilih(this,'S5Q1','B')"><span class="opt-label">C</span> Keduanya sama-sama berlaku</div>
+      <div class="option" onclick="pilih(this,'S5Q1','B')"><span class="opt-label">D</span> Harus diselesaikan di pengadilan internasional</div>
+      <div class="jawaban" id="j-S5Q1"><strong>✅ Jawaban: B</strong><br>Monisme dengan primat HI (Kelsen): HI adalah supremum, HN tunduk kepada HI. Jika HN bertentangan dengan HI, HN bisa dikesampingkan karena HI merupakan "the best available moderator of human affairs."</div>
+      <button class="btn-show" onclick="toggleJ('j-S5Q1')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 2</span>
+      <p>Perbedaan utama antara teori Monisme dan Dualisme terletak pada...</p>
+      <div class="option" onclick="pilih(this,'S5Q2','A')"><span class="opt-label">A</span> Apakah HI dan HN merupakan satu sistem hukum atau dua sistem yang terpisah</div>
+      <div class="option" onclick="pilih(this,'S5Q2','A')"><span class="opt-label">B</span> Siapa yang berwenang membuat hukum internasional</div>
+      <div class="option" onclick="pilih(this,'S5Q2','A')"><span class="opt-label">C</span> Jumlah sumber hukum internasional yang diakui</div>
+      <div class="option" onclick="pilih(this,'S5Q2','A')"><span class="opt-label">D</span> Negara mana yang lebih berkuasa di arena internasional</div>
+      <div class="jawaban" id="j-S5Q2"><strong>✅ Jawaban: A</strong><br>Monisme = HI dan HN satu sistem. Dualisme = HI dan HN dua sistem berbeda yang terpisah. Ini adalah perbedaan fundamental antara kedua teori.</div>
+      <button class="btn-show" onclick="toggleJ('j-S5Q2')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 3</span>
+      <p>Teori yang menyatakan HI harus melalui "alih bentuk" sebelum bisa berlaku di dalam negara disebut Teori...</p>
+      <div class="option" onclick="pilih(this,'S5Q3','C')"><span class="opt-label">A</span> Koordinasi</div>
+      <div class="option" onclick="pilih(this,'S5Q3','C')"><span class="opt-label">B</span> Harmonisasi</div>
+      <div class="option" onclick="pilih(this,'S5Q3','C')"><span class="opt-label">C</span> Transformasi</div>
+      <div class="option" onclick="pilih(this,'S5Q3','C')"><span class="opt-label">D</span> Delegasi</div>
+      <div class="jawaban" id="j-S5Q3"><strong>✅ Jawaban: C — Teori Transformasi</strong><br>Teori Transformasi: HI harus diubah ("ditransformasi") menjadi HN terlebih dahulu — baik secara formal (bentuk sesuai peraturan perundangan nasional) maupun substansial (isinya sesuai HN) — sebelum bisa berlaku di wilayah negara tersebut.</div>
+      <button class="btn-show" onclick="toggleJ('j-S5Q3')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 1</span>
+      <p>Inggris menganut doktrin bahwa "international law is the law of the land" yang dikenal sebagai doktrin <input class="fill-input" type="text" placeholder="...">.</p>
+      <div class="jawaban" id="j-S5I1"><strong>✅ Jawaban: Inkorporasi (Incorporation Doctrine)</strong><br>Doktrin inkorporasi Inggris = HI langsung menjadi bagian dari hukum Inggris tanpa perlu transformasi khusus.</div>
+      <button class="btn-show" onclick="toggleJ('j-S5I1')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num essay">ESSAY: Monisme vs Dualisme</span>
+      <p>Jelaskan kelebihan dan kelemahan teori Monisme dan Dualisme, lalu bandingkan keduanya!</p>
+      <div class="jawaban" id="j-S5E1">
+        <strong>✅ Jawaban Model:</strong><br>
+        <strong>Teori Monisme (Kelebihan):</strong> HI langsung berlaku di dalam negara (efisien), mendukung supremasi HI atas HN sehingga HI lebih kuat, konsisten secara ilmiah karena hukum dipandang sebagai satu kesatuan.<br>
+        <strong>Teori Monisme (Kelemahan):</strong> Terlalu generalis, mengabaikan perbedaan kondisi geografis, budaya, sejarah, dan perilaku sosial tiap negara. Tidak realistis karena HI sulit langsung menggantikan HN yang sudah lama berlaku.<br><br>
+        <strong>Teori Dualisme (Kelebihan):</strong> Lebih realistis, menghormati kedaulatan negara dan kemandirian sistem hukum nasional. HN tidak mudah digantikan oleh HI secara sepihak.<br>
+        <strong>Teori Dualisme (Kelemahan):</strong> Proses transformasi HI ke HN memakan waktu dan bisa membuat HI sulit diterapkan. HI menjadi lemah karena bergantung pada kemauan negara untuk mengadopsinya.<br><br>
+        <strong>Perbandingan:</strong> Dalam praktiknya, tidak ada pertentangan yang ekstrim. Kebanyakan negara mengambil pendekatan pragmatis — mengakomodasi dan mengkompromikan keduanya, seperti yang dilakukan Indonesia.
+      </div>
+      <button class="btn-show" onclick="toggleJ('j-S5E1')">Lihat Jawaban</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ===================== TAB 6: MODUL 6 ===================== -->
+<div id="tab6" class="tab-content">
+<div class="container">
+  <div class="sec-header">
+    <div class="sec-icon" style="background:#dcfce7;">👥</div>
+    <div>
+      <h2>Modul 6: Subyek Hukum Internasional</h2>
+      <p>Siapa saja yang punya hak dan kewajiban dalam HI?</p>
+    </div>
+  </div>
+
+  <div class="card green">
+    <h3>📖 Definisi Subyek Hukum Internasional</h3>
+    <div class="info-box green">
+      <strong>Subyek HI:</strong> Setiap pemilik, pemegang, dan pendukung hak dan kewajiban berdasarkan Hukum Internasional.
+    </div>
+    <p>Awalnya, hanya <strong>negara</strong> yang diakui sebagai subyek HI. Tapi seiring perkembangan, ada entitas lain yang diakui:</p>
+    <div class="grid3">
+      <div class="tag green">1. Negara</div>
+      <div class="tag blue">2. Organisasi Internasional</div>
+      <div class="tag red">3. Palang Merah Internasional</div>
+      <div class="tag purple">4. Tahta Suci Vatikan</div>
+      <div class="tag orange">5. Individu</div>
+      <div class="tag teal">6. Kaum Pemberontak</div>
+    </div>
+  </div>
+
+  <div class="card blue">
+    <h3>🏳️ 1. Negara — Subyek HI Utama</h3>
+    <div class="info-box blue">
+      Negara = subyek HI yang paling penting dan memiliki kemampuan penuh (full capacity) dalam HI.
+    </div>
+    <p><strong>Syarat Negara menurut Konvensi Montevideo 1933 (Pasal 1) — WAJIB HAFAL!</strong></p>
+    <div class="grid2">
+      <div class="info-box blue">
+        <strong>a. Penduduk Tetap (Permanent Population)</strong><br>
+        Kumpulan individu yang mendiami wilayah secara tetap dan terikat secara yuridik-politik melalui kewarganegaraan. Nomaden tidak memenuhi syarat!
+      </div>
+      <div class="info-box teal">
+        <strong>b. Wilayah Tertentu (Defined Territory)</strong><br>
+        Harus ada wilayah, tidak harus luas. Bisa terpecah-pecah (contoh: negara dengan wilayah seberang lautan). HI tidak menentukan luas minimumnya.
+      </div>
+      <div class="info-box purple">
+        <strong>c. Pemerintah (Government)</strong><br>
+        Harus stabil, memerintah sesuai hukum nasional, dan well-organized. Tanpa pemerintah → bukan negara dalam arti sebenarnya.
+      </div>
+      <div class="info-box orange">
+        <strong>d. Kapasitas Berhubungan dengan Negara Lain</strong><br>
+        Inilah yang membedakan negara berdaulat dari negara bagian atau protektorat. Negara harus bisa mengadakan hubungan internasional secara mandiri.
+      </div>
+    </div>
+  </div>
+
+  <div class="card purple">
+    <h3>🏛️ 2. Organisasi Internasional</h3>
+    <div class="info-box purple">
+      Organisasi internasional bisa jadi subyek HI jika memiliki <span class="kw">Legal Personality</span> — yaitu kapabilitas untuk memiliki hak & kewajiban internasional serta merumuskan dan menegakkan hukum.
+    </div>
+    <p><strong>Syarat memiliki legal personality (Teuku M. Rudi):</strong></p>
+    <ol>
+      <li>Keanggotaan negara yang bersifat tetap (permanen), bukan ad-hoc</li>
+      <li>Ada perbedaan kewenangan antara organisasi dengan negara anggota</li>
+      <li>Kewenangan dapat diterima dan diterapkan di ranah internasional</li>
+      <li>Kemampuan membuat perjanjian (<em>treaty making power</em>)</li>
+      <li>Hak memiliki aset sendiri (gedung, peralatan, dll.)</li>
+      <li>Kemampuan mengajukan tuntutan (claim)</li>
+      <li><em>Locus standi</em> — bisa berperkara di pengadilan internasional</li>
+      <li>Perlindungan fungsional bagi staf</li>
+      <li>Hak mengirim perwakilan ke konferensi internasional</li>
+    </ol>
+    <div class="info-box blue" style="margin-top:10px;">
+      <strong>Dasar hukum:</strong> Pasal 104 Piagam PBB — organisasi menikmati kapasitas hukum yang diperlukan untuk menjalankan fungsi dan tujuannya di wilayah anggota.
+    </div>
+    <div class="info-box teal" style="margin-top:8px;">
+      <strong>Klasifikasi Org. Internasional (Theodore Couloumbis & James Wolfe):</strong><br>
+      (a) Keanggotaan global, tujuan umum → PBB<br>
+      (b) Keanggotaan global, tujuan spesifik → World Bank, UNESCO, IMF, ILO<br>
+      (c) Keanggotaan regional, tujuan global → ASEAN, Uni Eropa<br>
+      (d) LBB (sekarang sudah tidak ada)
+    </div>
+  </div>
+
+  <div class="card red">
+    <h3>🔴 3. Palang Merah Internasional (ICRC)</h3>
+    <p>Awalnya organisasi nasional Swiss, didirikan oleh <strong>Henry Dunant</strong> dan 4 orang WN Swiss. Berkembang ke banyak negara → menjadi Palang Merah Internasional (ICRC) berkedudukan di Jenewa, Swiss.</p>
+    <div class="info-box red">
+      Palang Merah Internasional (ICRC) bergerak di bidang kemanusiaan. Diakui sebagai subyek HI karena peran kemanusiaannya yang lintas batas negara — memberikan bantuan kepada korban perang tanpa membeda-bedakan pihak.
+    </div>
+  </div>
+
+  <div class="card yellow">
+    <h3>✝️ 4. Tahta Suci Vatikan</h3>
+    <p>Diakui sebagai subyek HI berdasarkan <strong>Traktat Lateran 11 Februari 1929</strong> antara Italia dan Tahta Suci — Italia menyerahkan sebidang tanah di Roma → lahirlah negara Vatikan.</p>
+    <div class="info-box yellow">
+      Kewenangan Vatikan terbatas pada bidang <strong>kerohanian dan kemanusiaan</strong>. Hanya memiliki kekuatan moral, bukan militer. Namun wibawa Paus diakui luas → banyak negara membuka hubungan diplomatik dengan Vatikan (tukar menukar duta besar).
+    </div>
+  </div>
+
+  <div class="card orange">
+    <h3>⚔️ 5. Kaum Pemberontak (Belligerensi)</h3>
+    <p>Awalnya urusan dalam negeri saja. Tapi jika pemberontakan bersenjata berkembang menjadi perang saudara yang meluas ke negara lain → kaum pemberontak bisa diakui sebagai subyek HI.</p>
+    <div class="info-box orange">
+      <strong>Dasar hukum pengakuan pemberontak sebagai subyek HI:</strong><br>
+      • Hak menentukan nasib sendiri<br>
+      • Hak memilih sistem ekonomi, sosial, budaya sendiri<br>
+      • Hak menguasai sumber daya alam
+    </div>
+    <p>Pengakuan ini akan dipandang sebagai tindakan tidak bersahabat oleh pemerintah yang sah. Tapi dari sudut pandang negara yang mengakui → pemberontak sudah berstatus subyek HI.</p>
+  </div>
+
+  <div class="card teal">
+    <h3>👤 6. Individu</h3>
+    <p>Setelah PD II, individu semakin diakui sebagai subyek HI — terutama setelah lahirnya <strong>UDHR (Universal Declaration of Human Rights) 10 Desember 1948</strong>.</p>
+    <div class="info-box teal">
+      <strong>Dasar hukum individu sebagai subyek HI:</strong><br>
+      • Perjanjian Versailles 1919 (Pasal 297 dan 304)<br>
+      • Perjanjian Uppersilesia 1922<br>
+      • Keputusan PCIJ 1928<br>
+      • Perjanjian London 1945 (pengadilan penjahat perang Nuremberg)<br>
+      • Konvensi Genocide 1948
+    </div>
+    <div class="info-box blue" style="margin-top:8px;">
+      Pengadilan Nuremberg 1946 adalah titik balik penting: pertama kalinya individu (penjahat perang Nazi) diadili di forum internasional → individu resmi diakui sebagai subyek HI.
+    </div>
+  </div>
+
+  <!-- Soal Modul 6 -->
+  <div class="soal-header"><h2>🎯 Soal Latihan — Modul 6</h2></div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 1</span>
+      <p>Menurut Konvensi Montevideo 1933, syarat utama sebuah negara sebagai subyek HI meliputi empat hal. Manakah yang BUKAN termasuk syarat tersebut?</p>
+      <div class="option" onclick="pilih(this,'S6Q1','D')"><span class="opt-label">A</span> Penduduk tetap</div>
+      <div class="option" onclick="pilih(this,'S6Q1','D')"><span class="opt-label">B</span> Wilayah tertentu</div>
+      <div class="option" onclick="pilih(this,'S6Q1','D')"><span class="opt-label">C</span> Pemerintah yang efektif</div>
+      <div class="option" onclick="pilih(this,'S6Q1','D')"><span class="opt-label">D</span> Kekuatan militer yang kuat</div>
+      <div class="jawaban" id="j-S6Q1"><strong>✅ Jawaban: D — Kekuatan militer yang kuat</strong><br>4 syarat Konvensi Montevideo: (a) penduduk tetap, (b) wilayah tertentu, (c) pemerintah, (d) kapasitas untuk berhubungan dengan negara lain. Kekuatan militer TIDAK termasuk syarat.</div>
+      <button class="btn-show" onclick="toggleJ('j-S6Q1')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 2</span>
+      <p>Pengakuan Tahta Suci Vatikan sebagai subyek HI didasarkan pada...</p>
+      <div class="option" onclick="pilih(this,'S6Q2','B')"><span class="opt-label">A</span> Resolusi Majelis Umum PBB</div>
+      <div class="option" onclick="pilih(this,'S6Q2','B')"><span class="opt-label">B</span> Traktat Lateran 11 Februari 1929 antara pemerintah Italia dan Tahta Suci</div>
+      <div class="option" onclick="pilih(this,'S6Q2','B')"><span class="opt-label">C</span> Piagam PBB Pasal 104</div>
+      <div class="option" onclick="pilih(this,'S6Q2','B')"><span class="opt-label">D</span> Konvensi Wina 1969</div>
+      <div class="jawaban" id="j-S6Q2"><strong>✅ Jawaban: B — Traktat Lateran 1929</strong><br>Traktat Lateran antara Italia dan Tahta Suci mengatur penyerahan sebidang tanah di Roma → lahirlah negara Vatikan. Perjanjian ini sekaligus pengakuan Italia atas eksistensi Tahta Suci sebagai pribadi hukum internasional.</div>
+      <button class="btn-show" onclick="toggleJ('j-S6Q2')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 3</span>
+      <p>Yang membedakan negara berdaulat dari negara bagian atau protektorat sebagai subyek HI adalah...</p>
+      <div class="option" onclick="pilih(this,'S6Q3','C')"><span class="opt-label">A</span> Luas wilayahnya</div>
+      <div class="option" onclick="pilih(this,'S6Q3','C')"><span class="opt-label">B</span> Jumlah penduduknya</div>
+      <div class="option" onclick="pilih(this,'S6Q3','C')"><span class="opt-label">C</span> Kapasitas untuk mengadakan hubungan internasional secara mandiri</div>
+      <div class="option" onclick="pilih(this,'S6Q3','C')"><span class="opt-label">D</span> Besarnya kekuatan ekonomi</div>
+      <div class="jawaban" id="j-S6Q3"><strong>✅ Jawaban: C</strong><br>Syarat ke-4 Konvensi Montevideo: kapasitas untuk berhubungan dengan negara lain. Negara bagian dan protektorat bisa urus masalah dalam negeri, tapi tidak bisa melakukan hubungan internasional secara mandiri → tidak diakui sebagai subyek HI penuh.</div>
+      <button class="btn-show" onclick="toggleJ('j-S6Q3')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 4</span>
+      <p>Palang Merah Internasional (ICRC) didirikan pertama kali oleh...</p>
+      <div class="option" onclick="pilih(this,'S6Q4','A')"><span class="opt-label">A</span> Henry Dunant dan 4 warga Swiss lainnya</div>
+      <div class="option" onclick="pilih(this,'S6Q4','A')"><span class="opt-label">B</span> Liga Bangsa-Bangsa</div>
+      <div class="option" onclick="pilih(this,'S6Q4','A')"><span class="opt-label">C</span> PBB melalui resolusi Majelis Umum</div>
+      <div class="option" onclick="pilih(this,'S6Q4','A')"><span class="opt-label">D</span> Pemerintah Swiss secara resmi</div>
+      <div class="jawaban" id="j-S6Q4"><strong>✅ Jawaban: A</strong><br>ICRC awalnya organisasi nasional Swiss, didirikan oleh Henry Dunant bersama 4 warga Swiss. Kegiatan kemanusiaannya meluas → dibentuk ICRC yang berkedudukan di Jenewa.</div>
+      <button class="btn-show" onclick="toggleJ('j-S6Q4')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 5</span>
+      <p>Peristiwa bersejarah yang menjadi tonggak pengakuan INDIVIDU sebagai subyek HI adalah...</p>
+      <div class="option" onclick="pilih(this,'S6Q5','C')"><span class="opt-label">A</span> Deklarasi Bangkok 1967</div>
+      <div class="option" onclick="pilih(this,'S6Q5','C')"><span class="opt-label">B</span> Traktat Westphalia 1648</div>
+      <div class="option" onclick="pilih(this,'S6Q5','C')"><span class="opt-label">C</span> Pengadilan Nuremberg 1946 (pengadilan penjahat perang Nazi)</div>
+      <div class="option" onclick="pilih(this,'S6Q5','C')"><span class="opt-label">D</span> Konvensi Montevideo 1933</div>
+      <div class="jawaban" id="j-S6Q5"><strong>✅ Jawaban: C — Pengadilan Nuremberg 1946</strong><br>Pengadilan Nuremberg adalah pertama kalinya individu (penjahat perang Nazi Jerman) diadili di forum internasional. Ini menandai pengakuan individu sebagai subyek HI yang bisa dituntut secara internasional.</div>
+      <button class="btn-show" onclick="toggleJ('j-S6Q5')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 1</span>
+      <p>Dasar hukum yang menyatakan organisasi internasional sebagai subyek HI terdapat dalam Pasal <input class="fill-input" type="text" placeholder="..."> Piagam PBB.</p>
+      <div class="jawaban" id="j-S6I1"><strong>✅ Jawaban: 104</strong><br>Pasal 104 Piagam PBB: "The Organization shall enjoy in the territory of each of its Members such legal capacity as may be necessary for the exercise of its functions and the fulfilment of its purposes."</div>
+      <button class="btn-show" onclick="toggleJ('j-S6I1')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num essay">ESSAY 1</span>
+      <p>Kapan kaum pemberontak yang terorganisir bisa dikualifikasikan sebagai subyek HI? Jelaskan!</p>
+      <div class="jawaban" id="j-S6E1">
+        <strong>✅ Jawaban Model:</strong><br>
+        Kaum pemberontak awalnya dianggap urusan dalam negeri negara berdaulat. Namun mereka bisa diakui sebagai subyek HI jika:<br><br>
+        1. Pemberontakan sudah berbentuk <strong>bersenjata</strong> dan terorganisir<br>
+        2. Berkembang menjadi <strong>perang saudara</strong> dengan akibat kemanusiaan yang besar<br>
+        3. <strong>Meluas ke negara-negara lain</strong> (tidak lagi hanya urusan domestik)<br>
+        4. Ada negara lain yang memberikan <strong>pengakuan</strong> atas eksistensi mereka<br><br>
+        Dasar hukumnya: hak menentukan nasib sendiri, hak memilih sistem sendiri, hak menguasai sumber daya alam.<br><br>
+        Pengakuan ini bersifat subyektif dari negara yang mengakui — bagi negara yang mengakui, kaum pemberontak sudah berstatus subyek HI. Tapi pengakuan ini biasanya dipandang tidak bersahabat oleh pemerintah yang sah dari negara yang bersangkutan.
+      </div>
+      <button class="btn-show" onclick="toggleJ('j-S6E1')">Lihat Jawaban</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ===================== TAB BANK SOAL ===================== -->
+<div id="tabsoal" class="tab-content">
+<div class="container">
+  <div class="soal-header">
+    <h2>🎯 BANK SOAL UJIAN — HUKUM INTERNASIONAL LENGKAP</h2>
+    <p>Soal pilihan ganda, isian, kasus, dan essay — mencakup SEMUA materi!</p>
+  </div>
+
+  <div class="info-box yellow">
+    <strong>💡 Tips Mengerjakan:</strong> Coba dulu tanpa melihat jawaban! Klik "Lihat Jawaban" setelah kamu sudah berpikir. Ini cara terbaik untuk benar-benar hafal materialnya.
+  </div>
+
+  <h3 style="margin:24px 0 16px;font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--blue);">🔵 Bagian A: Pilihan Ganda (Campuran Semua Materi)</h3>
+
+  <!-- PG 1-40 -->
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 1</span>
+      <p>Hukum Internasional didefinisikan sebagai himpunan peraturan yang mengatur hubungan antara negara-negara dan subyek hukum lainnya. Definisi ini mencerminkan pandangan bahwa HI bersifat...</p>
+      <div class="option" onclick="pilih(this,'BQ1','B')"><span class="opt-label">A</span> Subordinatif</div>
+      <div class="option" onclick="pilih(this,'BQ1','B')"><span class="opt-label">B</span> Koordinatif (setara antar anggota)</div>
+      <div class="option" onclick="pilih(this,'BQ1','B')"><span class="opt-label">C</span> Hierarkis seperti hukum nasional</div>
+      <div class="option" onclick="pilih(this,'BQ1','B')"><span class="opt-label">D</span> Bersifat memaksa penuh</div>
+      <div class="jawaban" id="j-BQ1"><strong>✅ Jawaban: B — Koordinatif</strong><br>HI mengatur hubungan antar negara yang sederajat (koordinasi), bukan subordinasi. Tidak ada pemerintahan dunia di atas negara-negara.</div>
+      <button class="btn-show" onclick="toggleJ('j-BQ1')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 2</span>
+      <p>"Ius Gentium" dalam hukum Romawi yang kemudian berkembang menjadi Hukum Internasional berarti...</p>
+      <div class="option" onclick="pilih(this,'BQ2','C')"><span class="opt-label">A</span> Hukum perang yang adil</div>
+      <div class="option" onclick="pilih(this,'BQ2','C')"><span class="opt-label">B</span> Hukum konstitusi Romawi</div>
+      <div class="option" onclick="pilih(this,'BQ2','C')"><span class="opt-label">C</span> Hukum yang berlaku bagi orang asing / hukum masyarakat (bukan hanya warga Romawi)</div>
+      <div class="option" onclick="pilih(this,'BQ2','C')"><span class="opt-label">D</span> Hukum adat kebiasaan antar suku</div>
+      <div class="jawaban" id="j-BQ2"><strong>✅ Jawaban: C</strong><br>Ius Gentium = hukum untuk orang asing (non-Romawi). Berbeda dengan Ius Civile (hukum untuk warga Romawi). Berkembang → Ius Inter Gentium → Völkerrecht/Law of Nations → Hukum Internasional.</div>
+      <button class="btn-show" onclick="toggleJ('j-BQ2')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 3</span>
+      <p>Dalam perjanjian bilateral, jika negara A mengajukan reservasi (persyaratan) tapi ditolak negara B, maka negara A...</p>
+      <div class="option" onclick="pilih(this,'BQ3','D')"><span class="opt-label">A</span> Tetap terikat perjanjian dengan pengecualian</div>
+      <div class="option" onclick="pilih(this,'BQ3','D')"><span class="opt-label">B</span> Bisa mengajukan ke ICJ</div>
+      <div class="option" onclick="pilih(this,'BQ3','D')"><span class="opt-label">C</span> Harus membuat perjanjian baru</div>
+      <div class="option" onclick="pilih(this,'BQ3','D')"><span class="opt-label">D</span> Hanya punya dua pilihan: tunduk penuh atau menolak perjanjian sama sekali</div>
+      <div class="jawaban" id="j-BQ3"><strong>✅ Jawaban: D</strong><br>Dalam perjanjian bilateral, reservasi secara praktis tidak bermakna — hanya ada dua pilihan: tunduk penuh atau tidak sama sekali. Berbeda dengan perjanjian multilateral di mana reservasi lebih fleksibel.</div>
+      <button class="btn-show" onclick="toggleJ('j-BQ3')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 4</span>
+      <p>Kesamaan derajat (equality) antar negara dalam HI bermakna...</p>
+      <div class="option" onclick="pilih(this,'BQ4','A')"><span class="opt-label">A</span> Setiap negara berkedudukan sama tanpa memandang kekuatan ekonomi atau teknologi</div>
+      <div class="option" onclick="pilih(this,'BQ4','A')"><span class="opt-label">B</span> Negara besar lebih memiliki suara dalam HI</div>
+      <div class="option" onclick="pilih(this,'BQ4','A')"><span class="opt-label">C</span> Semua negara wajib bergabung dengan PBB</div>
+      <div class="option" onclick="pilih(this,'BQ4','A')"><span class="opt-label">D</span> Negara dengan wilayah luas memiliki hak lebih banyak</div>
+      <div class="jawaban" id="j-BQ4"><strong>✅ Jawaban: A</strong><br>Persamaan derajat = semua negara setara dalam HI, tidak peduli seberapa besar/kecil ekonomi atau teknologinya. Ini konsekuensi dari kedaulatan yang dimiliki setiap negara.</div>
+      <button class="btn-show" onclick="toggleJ('j-BQ4')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 5</span>
+      <p>Konferensi Asia-Afrika (KAA) di Bandung pada April 1955 dihadiri oleh kepala negara dari berapa negara?</p>
+      <div class="option" onclick="pilih(this,'BQ5','C')"><span class="opt-label">A</span> 15 negara</div>
+      <div class="option" onclick="pilih(this,'BQ5','C')"><span class="opt-label">B</span> 20 negara</div>
+      <div class="option" onclick="pilih(this,'BQ5','C')"><span class="opt-label">C</span> 23 negara</div>
+      <div class="option" onclick="pilih(this,'BQ5','C')"><span class="opt-label">D</span> 30 negara</div>
+      <div class="jawaban" id="j-BQ5"><strong>✅ Jawaban: C — 23 negara</strong><br>KAA Bandung 1955 dihadiri kepala negara dari 23 negara Asia dan Afrika. Konferensi ini lahirkan Gerakan Non-Blok dan menunjukkan euphoria negara-negara yang baru merdeka dari kolonialisme.</div>
+      <button class="btn-show" onclick="toggleJ('j-BQ5')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 6</span>
+      <p>Pengadilan Mahkamah Internasional Permanen (PCIJ) mulai beroperasi pada tahun...</p>
+      <div class="option" onclick="pilih(this,'BQ6','B')"><span class="opt-label">A</span> 1919</div>
+      <div class="option" onclick="pilih(this,'BQ6','B')"><span class="opt-label">B</span> 1922</div>
+      <div class="option" onclick="pilih(this,'BQ6','B')"><span class="opt-label">C</span> 1945</div>
+      <div class="option" onclick="pilih(this,'BQ6','B')"><span class="opt-label">D</span> 1948</div>
+      <div class="jawaban" id="j-BQ6"><strong>✅ Jawaban: B — 1922</strong><br>PCIJ (Permanent Court of International Justice) berkedudukan di Den Haag, mulai beroperasi 1922. Strukturnya kemudian menjadi basis ICJ (International Court of Justice) yang ada sekarang.</div>
+      <button class="btn-show" onclick="toggleJ('j-BQ6')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 7</span>
+      <p>ASEAN Charter yang secara eksplisit menyatakan legal personality ASEAN disahkan pada tahun...</p>
+      <div class="option" onclick="pilih(this,'BQ7','D')"><span class="opt-label">A</span> 1967</div>
+      <div class="option" onclick="pilih(this,'BQ7','D')"><span class="opt-label">B</span> 1984</div>
+      <div class="option" onclick="pilih(this,'BQ7','D')"><span class="opt-label">C</span> 1995</div>
+      <div class="option" onclick="pilih(this,'BQ7','D')"><span class="opt-label">D</span> 2007</div>
+      <div class="jawaban" id="j-BQ7"><strong>✅ Jawaban: D — 2007</strong><br>Deklarasi Bangkok 1967 mendirikan ASEAN tapi tidak mencantumkan legal personality. Baru ASEAN Charter 2007 yang secara eksplisit menyatakan legal personality ASEAN sebagai subyek HI.</div>
+      <button class="btn-show" onclick="toggleJ('j-BQ7')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 8</span>
+      <p>Negara yang secara terus-menerus menolak suatu kebiasaan internasional sehingga kebiasaan itu tidak berlaku baginya disebut...</p>
+      <div class="option" onclick="pilih(this,'BQ8','A')"><span class="opt-label">A</span> Persistent Objector</div>
+      <div class="option" onclick="pilih(this,'BQ8','A')"><span class="opt-label">B</span> Non-conformist State</div>
+      <div class="option" onclick="pilih(this,'BQ8','A')"><span class="opt-label">C</span> Rogue State</div>
+      <div class="option" onclick="pilih(this,'BQ8','A')"><span class="opt-label">D</span> Isolated State</div>
+      <div class="jawaban" id="j-BQ8"><strong>✅ Jawaban: A — Persistent Objector</strong><br>Negara yang konsisten menolak sejak awal pembentukan kebiasaan internasional (penolakan harus jelas dan terus-menerus) bisa terhindar dari berlakunya kebiasaan tersebut.</div>
+      <button class="btn-show" onclick="toggleJ('j-BQ8')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 9</span>
+      <p>Manakah pernyataan yang BENAR tentang hubungan Hukum Internasional dengan hukum kebiasaan internasional?</p>
+      <div class="option" onclick="pilih(this,'BQ9','C')"><span class="opt-label">A</span> Kebiasaan internasional tidak bisa menjadi HI</div>
+      <div class="option" onclick="pilih(this,'BQ9','C')"><span class="opt-label">B</span> Kebiasaan internasional hanya berlaku bagi negara besar</div>
+      <div class="option" onclick="pilih(this,'BQ9','C')"><span class="opt-label">C</span> Kebiasaan internasional yang diam saja saat pembentukannya tidak bisa menghindar dari berlakunya kebiasaan itu</div>
+      <div class="option" onclick="pilih(this,'BQ9','C')"><span class="opt-label">D</span> Kebiasaan internasional hanya berlaku jika sudah dikodifikasi dalam traktat</div>
+      <div class="jawaban" id="j-BQ9"><strong>✅ Jawaban: C</strong><br>Negara yang diam saja (tidak menolak) saat kebiasaan internasional terbentuk tidak bisa kemudian menghindar dari pemberlakuannya. Hanya persistent objector (yang aktif menolak dari awal) yang bisa terhindar.</div>
+      <button class="btn-show" onclick="toggleJ('j-BQ9')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 10</span>
+      <p>Universitas di mana Francisco de Vitoria memberikan kuliah yang menjadi awal kajian HI sistematik adalah...</p>
+      <div class="option" onclick="pilih(this,'BQ10','B')"><span class="opt-label">A</span> Oxford, Inggris</div>
+      <div class="option" onclick="pilih(this,'BQ10','B')"><span class="opt-label">B</span> Salamanca, Spanyol</div>
+      <div class="option" onclick="pilih(this,'BQ10','B')"><span class="opt-label">C</span> Leiden, Belanda</div>
+      <div class="option" onclick="pilih(this,'BQ10','B')"><span class="opt-label">D</span> Heidelberg, Jerman</div>
+      <div class="jawaban" id="j-BQ10"><strong>✅ Jawaban: B — Salamanca, Spanyol</strong><br>Francisco de Vitoria memberikan kuliah di Universitas Salamanca untuk menjustifikasi praktek penaklukan Spanyol. Ini dianggap sebagai awal kajian HI yang sistematis.</div>
+      <button class="btn-show" onclick="toggleJ('j-BQ10')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 11</span>
+      <p>Traktat internasional yang mengatur tentang Hukum Perjanjian Internasional (hukum tentang membuat traktat) adalah...</p>
+      <div class="option" onclick="pilih(this,'BQ11','C')"><span class="opt-label">A</span> Piagam PBB 1945</div>
+      <div class="option" onclick="pilih(this,'BQ11','C')"><span class="opt-label">B</span> Statuta ICJ 1945</div>
+      <div class="option" onclick="pilih(this,'BQ11','C')"><span class="opt-label">C</span> Konvensi Wina 1969</div>
+      <div class="option" onclick="pilih(this,'BQ11','C')"><span class="opt-label">D</span> Konvensi Montevideo 1933</div>
+      <div class="jawaban" id="j-BQ11"><strong>✅ Jawaban: C — Konvensi Wina 1969</strong><br>Konvensi Wina 1969 tentang Hukum Perjanjian (Law of Treaties) mengatur proses pembuatan, validitas, pelaksanaan, dan berakhirnya perjanjian internasional.</div>
+      <button class="btn-show" onclick="toggleJ('j-BQ11')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 12</span>
+      <p>Peran Majelis Umum PBB yang melebihi batas formal karena pengaruhnya dalam melahirkan kaidah internasional disebut...</p>
+      <div class="option" onclick="pilih(this,'BQ12','D')"><span class="opt-label">A</span> Super legislative</div>
+      <div class="option" onclick="pilih(this,'BQ12','D')"><span class="opt-label">B</span> Executive power</div>
+      <div class="option" onclick="pilih(this,'BQ12','D')"><span class="opt-label">C</span> Judicial review</div>
+      <div class="option" onclick="pilih(this,'BQ12','D')"><span class="opt-label">D</span> Quasi legislative</div>
+      <div class="jawaban" id="j-BQ12"><strong>✅ Jawaban: D — Quasi legislative</strong><br>Resolusi Majelis Umum PBB secara formal hanya "anjuran" (Pasal 10 Piagam PBB), tapi praktiknya sangat berpengaruh — sering disebut berperan quasi legislative (seperti legislatif) dalam membentuk kaidah HI.</div>
+      <button class="btn-show" onclick="toggleJ('j-BQ12')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 13</span>
+      <p>Menurut Triepel, perbedaan HI dengan HN dilihat dari aspek...</p>
+      <div class="option" onclick="pilih(this,'BQ13','A')"><span class="opt-label">A</span> Subjek dan sumber hukumnya</div>
+      <div class="option" onclick="pilih(this,'BQ13','A')"><span class="opt-label">B</span> Wilayah berlakunya</div>
+      <div class="option" onclick="pilih(this,'BQ13','A')"><span class="opt-label">C</span> Sanksi yang diberikan</div>
+      <div class="option" onclick="pilih(this,'BQ13','A')"><span class="opt-label">D</span> Usia berlakunya hukum</div>
+      <div class="jawaban" id="j-BQ13"><strong>✅ Jawaban: A</strong><br>Menurut Triepel (tokoh Dualisme): HI ≠ HN dilihat dari subjek dan sumber. Anzilotti membedakannya dari dasar mengikat/kekuatannya.</div>
+      <button class="btn-show" onclick="toggleJ('j-BQ13')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 14</span>
+      <p>Asas "Pacta Sunt Servanda" berarti...</p>
+      <div class="option" onclick="pilih(this,'BQ14','B')"><span class="opt-label">A</span> Hukum harus bersumber dari kehendak negara</div>
+      <div class="option" onclick="pilih(this,'BQ14','B')"><span class="opt-label">B</span> Perjanjian yang sudah disepakati harus ditepati/dihormati</div>
+      <div class="option" onclick="pilih(this,'BQ14','B')"><span class="opt-label">C</span> Tidak ada hukum yang lebih tinggi dari hukum negara</div>
+      <div class="option" onclick="pilih(this,'BQ14','B')"><span class="opt-label">D</span> Semua negara sederajat di mata hukum</div>
+      <div class="jawaban" id="j-BQ14"><strong>✅ Jawaban: B</strong><br>"Pacta Sunt Servanda" = perjanjian harus ditaati. Ini warisan hukum Romawi dan menjadi Grundnorm (norma dasar) HI menurut Hans Kelsen/Mazhab Wina.</div>
+      <button class="btn-show" onclick="toggleJ('j-BQ14')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num pg">PG 15</span>
+      <p>Deklarasi Universal Hak Asasi Manusia (UDHR) diterima oleh Majelis Umum PBB pada tanggal...</p>
+      <div class="option" onclick="pilih(this,'BQ15','C')"><span class="opt-label">A</span> 26 Juni 1945</div>
+      <div class="option" onclick="pilih(this,'BQ15','C')"><span class="opt-label">B</span> 24 Oktober 1945</div>
+      <div class="option" onclick="pilih(this,'BQ15','C')"><span class="opt-label">C</span> 10 Desember 1948</div>
+      <div class="option" onclick="pilih(this,'BQ15','C')"><span class="opt-label">D</span> 1 Januari 1949</div>
+      <div class="jawaban" id="j-BQ15"><strong>✅ Jawaban: C — 10 Desember 1948</strong><br>10 Desember diperingati sebagai Hari HAM Sedunia karena pada tanggal inilah UDHR diterima oleh Majelis Umum PBB. UDHR menjadi tonggak penting pengakuan individu sebagai subyek HI.</div>
+      <button class="btn-show" onclick="toggleJ('j-BQ15')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <h3 style="margin:32px 0 16px;font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--teal);">🟢 Bagian B: Soal Isian Singkat</h3>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 1</span>
+      <p>Asas dalam HI yang berasal dari Romawi dan menyatakan bahwa perjanjian yang sudah dibuat harus dipatuhi adalah asas <input class="fill-input" type="text" placeholder="...">.</p>
+      <div class="jawaban" id="j-BSI1"><strong>✅ Jawaban: Pacta Sunt Servanda</strong></div>
+      <button class="btn-show" onclick="toggleJ('j-BSI1')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 2</span>
+      <p>Buku karya Hugo Grotius yang menjadi karya paling berpengaruh dalam HI modern berjudul <input class="fill-input" type="text" placeholder="..."> dan diterbitkan pada tahun 1625 di Paris.</p>
+      <div class="jawaban" id="j-BSI2"><strong>✅ Jawaban: "On the Law of War and Peace" (De Jure Belli ac Pacis)</strong></div>
+      <button class="btn-show" onclick="toggleJ('j-BSI2')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 3</span>
+      <p>Proses ketika suatu kebiasaan internasional dijadikan perjanjian internasional secara tertulis disebut proses <input class="fill-input" type="text" placeholder="..."> kebiasaan ke traktat.</p>
+      <div class="jawaban" id="j-BSI3"><strong>✅ Jawaban: Kodifikasi / Transisi</strong><br>Proses: Kebiasaan internasional → Hukum Kebiasaan Internasional (dengan adanya opinio juris) → Perjanjian Internasional (melalui kodifikasi).</div>
+      <button class="btn-show" onclick="toggleJ('j-BSI3')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 4</span>
+      <p>Organisasi Islam Internasional yang didirikan sekitar tahun 1973 dengan peran Soekarno dan Jamal Abdul Natsir dikenal dengan nama <input class="fill-input" type="text" placeholder="...">.</p>
+      <div class="jawaban" id="j-BSI4"><strong>✅ Jawaban: OKI (Organisasi Konferensi Islam Internasional)</strong></div>
+      <button class="btn-show" onclick="toggleJ('j-BSI4')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 5</span>
+      <p>Konsep yang dikemukakan Kong Hu Cu tentang persatuan negara-negara Tiongkok dianggap setara dengan konsep modern <input class="fill-input" type="text" placeholder="...">.</p>
+      <div class="jawaban" id="j-BSI5"><strong>✅ Jawaban: Liga Bangsa-Bangsa (LBB)</strong><br>Upaya pembentukan perserikatan negara-negara Tiongkok oleh Kong Hu Cu dianggap sebanding dengan konsep LBB (League of Nations) pada masa modern.</div>
+      <button class="btn-show" onclick="toggleJ('j-BSI5')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 6</span>
+      <p>Traktat yang mengatur nasionalisasi perusahaan Belanda di Indonesia adalah UU Nasionalisasi No. <input class="fill-input" type="text" placeholder="..."> Tahun 1957.</p>
+      <div class="jawaban" id="j-BSI6"><strong>✅ Jawaban: 86 (UU No. 86 Tahun 1957)</strong></div>
+      <button class="btn-show" onclick="toggleJ('j-BSI6')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num isian">ISIAN 7</span>
+      <p>Dalam teori dualisme, HN berbeda dari HI karena dilihat dari tiga sandaran yaitu perbedaan <input class="fill-input" type="text" placeholder="...">, hubungan yang diatur, dan hakikatnya.</p>
+      <div class="jawaban" id="j-BSI7"><strong>✅ Jawaban: Sumber hukumnya</strong><br>(Menurut Oppenheim dalam Dualisme: perbedaan HI dan HN dilihat dari tiga sandaran: sumbernya, hubungan yang diaturnya, dan hakikatnya.)</div>
+      <button class="btn-show" onclick="toggleJ('j-BSI7')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <h3 style="margin:32px 0 16px;font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--orange);">🟠 Bagian C: Soal Kasus (Analisis)</h3>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num kasus">KASUS 1</span>
+      <p><strong>Skenario:</strong> Negara Antaria dan Negara Bantaria menandatangani perjanjian bilateral tentang ekspor minyak. Negara Antaria kemudian mengajukan reservasi (mengecualikan salah satu pasal), namun Negara Bantaria menolak reservasi tersebut. Antaria tetap ingin terikat perjanjian.<br><br>
+      <strong>Pertanyaan:</strong> Apa konsekuensi hukum bagi Antaria dalam situasi ini?</p>
+      <div class="jawaban" id="j-KC1">
+        <strong>✅ Jawaban Model:</strong><br>
+        Dalam perjanjian BILATERAL, reservasi secara praktis tidak berarti apa-apa. Setelah Bantaria menolak reservasi Antaria, Antaria hanya punya DUA pilihan:<br>
+        (1) <strong>Tunduk penuh</strong> pada perjanjian tanpa reservasi (semua pasal berlaku termasuk yang ingin dikecualikan), atau<br>
+        (2) <strong>Menolak</strong> perjanjian sama sekali (tidak mengikat diri).<br><br>
+        Berbeda jika ini perjanjian multilateral — dalam perjanjian multilateral, reservasi lebih fleksibel dan tidak perlu mengubah perjanjian induk.
+      </div>
+      <button class="btn-show" onclick="toggleJ('j-KC1')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num kasus">KASUS 2</span>
+      <p><strong>Skenario:</strong> Di sebuah daerah terpencil, kelompok bersenjata berhasil menguasai sepertiga wilayah sebuah negara selama 5 tahun dan mendirikan pemerintahan sendiri. Beberapa negara tetangga mulai memberikan pengakuan kepada kelompok ini.<br><br>
+      <strong>Pertanyaan:</strong> Apakah kelompok ini bisa dikategorikan sebagai subyek HI? Jelaskan syarat-syaratnya!</p>
+      <div class="jawaban" id="j-KC2">
+        <strong>✅ Jawaban Model:</strong><br>
+        Ya, berpotensi menjadi subyek HI sebagai <strong>Kaum Pemberontak/Belligerensi</strong>. Syarat-syaratnya:<br>
+        1. Pemberontakan sudah <strong>bersenjata dan terorganisir</strong> ✓ (dalam kasus ini: sudah 5 tahun)<br>
+        2. Berkembang menjadi <strong>perang saudara</strong> dengan akibat kemanusiaan besar<br>
+        3. <strong>Meluas ke negara lain</strong> atau memiliki dampak internasional<br>
+        4. Ada <strong>pengakuan dari negara lain</strong> ✓ (dalam kasus ini: beberapa negara tetangga mengakui)<br><br>
+        Dari sudut pandang negara yang mengakui → kelompok ini sudah berstatus subyek HI. Tapi pengakuan ini bisa dipandang tidak bersahabat oleh pemerintah sah negara yang bersangkutan.
+      </div>
+      <button class="btn-show" onclick="toggleJ('j-KC2')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num kasus">KASUS 3</span>
+      <p><strong>Skenario:</strong> Negara Canadia meratifikasi sebuah konvensi internasional tentang lingkungan hidup, namun ternyata salah satu pasalnya bertentangan dengan Undang-Undang Perlindungan Industri yang sudah ada.<br><br>
+      <strong>Pertanyaan:</strong> Bagaimana pandangan teori Monisme dan Dualisme dalam menyelesaikan konflik ini?</p>
+      <div class="jawaban" id="j-KC3">
+        <strong>✅ Jawaban Model:</strong><br>
+        <strong>Pandangan Monisme (primat HI):</strong> Konvensi internasional lebih tinggi dari UU nasional. UU Perlindungan Industri yang bertentangan harus dikesampingkan. HI berlaku langsung tanpa perlu transformasi.<br><br>
+        <strong>Pandangan Dualisme:</strong> HI dan HN adalah dua sistem berbeda. Konvensi tidak langsung mengubah UU nasional. Canadia harus lebih dulu mentransformasi konvensi internasional tersebut ke dalam hukum nasional (misalnya: membuat UU baru atau mengamandemen UU yang bertentangan). Selama belum ditransformasi, konvensi tidak berlaku di dalam negeri.<br><br>
+        <strong>Praktik:</strong> Indonesia cenderung menggunakan pendekatan campuran — mengakui HI tapi dengan kewajaran dan kepekaan terhadap kondisi nasional.
+      </div>
+      <button class="btn-show" onclick="toggleJ('j-KC3')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <h3 style="margin:32px 0 16px;font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--pink);">🔴 Bagian D: Essay Panjang</h3>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num essay">ESSAY 1</span>
+      <p>Apa yang dimaksud dengan masyarakat internasional? Jelaskan hubungan antara masyarakat internasional, kedaulatan negara, dan Hukum Internasional!</p>
+      <div class="jawaban" id="j-BE1">
+        <strong>✅ Jawaban Model:</strong><br>
+        <strong>Masyarakat Internasional</strong> adalah subyek-subyek HI yang saling mengadakan hubungan satu dengan lainnya. Pada hakikatnya adalah hubungan kehidupan antarmanusia yang terdiri dari aneka ragam masyarakat yang terjalin erat.<br><br>
+        <strong>Hubungan dengan Kedaulatan:</strong> Kedaulatan = kekuasaan tertinggi dalam batas wilayah suatu negara. Setiap negara berdaulat memiliki kesamaan derajat. Namun kedaulatan bukan tanpa batas — ia berakhir di mana kedaulatan negara lain dimulai. Inilah yang memungkinkan negara-negara saling berinteraksi tanpa menghilangkan kedaulatan masing-masing.<br><br>
+        <strong>Hubungan dengan HI:</strong> Masyarakat internasional adalah landasan sosiologis HI. HI ada karena ada masyarakat internasional yang membutuhkan aturan. Hubungan tetap antar negara menciptakan kebutuhan akan hukum yang mengatur → lahirlah HI. Tanpa masyarakat internasional, HI tidak akan ada; tanpa HI, masyarakat internasional tidak bisa berjalan tertib.
+      </div>
+      <button class="btn-show" onclick="toggleJ('j-BE1')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num essay">ESSAY 2</span>
+      <p>Sebutkan dan jelaskan sumber-sumber Hukum Internasional menurut Pasal 38 Statuta Mahkamah Internasional! Berikan contoh untuk setiap sumbernya!</p>
+      <div class="jawaban" id="j-BE2">
+        <strong>✅ Jawaban Model:</strong><br>
+        Pasal 38 Statuta ICJ mengakui 4 sumber HI:<br><br>
+        <strong>1. Perjanjian Internasional (International Conventions)</strong> — Sumber primer<br>
+        Perjanjian antar subyek HI yang melahirkan hak dan kewajiban. Contoh: UNCLOS 1982 (hukum laut), Piagam PBB 1945, Konvensi Genocide 1948.<br><br>
+        <strong>2. Kebiasaan Internasional (International Custom)</strong> — Sumber primer<br>
+        Praktek umum yang diterima sebagai hukum. Harus ada dua elemen: praktek negara (duration, uniformity, generality) + opinio juris. Contoh: kekebalan diplomatik yang awalnya kebiasaan, lalu dikodifikasi dalam Konvensi Wina 1961.<br><br>
+        <strong>3. Prinsip Hukum Umum (General Principles of Law)</strong> — Sumber primer<br>
+        Asas-asas yang diakui bangsa-bangsa beradab. Mencegah non liquet. Contoh: asas pacta sunt servanda, bona fides, non-intervensi.<br><br>
+        <strong>4. Putusan Pengadilan &amp; Doktrin</strong> — Sumber subsidair/pelengkap<br>
+        Tidak mengikat secara formal tapi berpengaruh besar. Putusan ICJ hanya mengikat para pihak (Pasal 59). Contoh: putusan ICJ dalam kasus North Sea Continental Shelf 1969; doktrin oleh anggota ILC PBB.
+      </div>
+      <button class="btn-show" onclick="toggleJ('j-BE2')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num essay">ESSAY 3</span>
+      <p>Sebutkan dan jelaskan 6 subyek Hukum Internasional yang diakui saat ini! Mana yang paling utama dan mengapa?</p>
+      <div class="jawaban" id="j-BE3">
+        <strong>✅ Jawaban Model:</strong><br>
+        6 Subyek HI yang diakui:<br><br>
+        <strong>1. Negara</strong> — Subyek UTAMA dan PALING PENTING. Full capacity dalam HI. Syarat: penduduk tetap, wilayah tertentu, pemerintah efektif, kapasitas berhubungan dengan negara lain (Konvensi Montevideo 1933).<br><br>
+        <strong>2. Organisasi Internasional</strong> — Subyek yang berkembang. Harus memiliki legal personality. Contoh: PBB (Pasal 104 Piagam PBB), ASEAN (sejak ASEAN Charter 2007), UNESCO, WHO.<br><br>
+        <strong>3. Palang Merah Internasional (ICRC)</strong> — Bergerak di bidang kemanusiaan. Didirikan Henry Dunant dan 4 WN Swiss. Berkedudukan di Jenewa.<br><br>
+        <strong>4. Tahta Suci Vatikan</strong> — Diakui berdasarkan Traktat Lateran 1929. Kewenangan terbatas pada bidang kerohanian dan kemanusiaan. Bisa tukar duta besar dengan negara-negara.<br><br>
+        <strong>5. Kaum Pemberontak/Belligerensi</strong> — Diakui jika pemberontakan bersenjata berkembang menjadi perang saudara yang meluas ke negara lain dan diakui oleh negara lain.<br><br>
+        <strong>6. Individu</strong> — Diakui terutama setelah PD II. Tonggak: Pengadilan Nuremberg 1946 dan UDHR 1948. Dasar hukum: Perjanjian Versailles 1919, Perjanjian London 1945, Konvensi Genocide 1948.<br><br>
+        <strong>Yang paling utama: NEGARA</strong>, karena memiliki full capacity, HI awalnya memang dibuat untuk mengatur hubungan antarnegara, dan negara masih menjadi aktor utama dalam hubungan internasional.
+      </div>
+      <button class="btn-show" onclick="toggleJ('j-BE3')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="soal-card">
+    <div class="soal-body">
+      <span class="soal-num essay">ESSAY 4</span>
+      <p>Mengapa Hukum Internasional sering disebut sebagai "soft law"? Apakah HI benar-benar ada sebagai hukum? Argumentasikan!</p>
+      <div class="jawaban" id="j-BE4">
+        <strong>✅ Jawaban Model:</strong><br>
+        <strong>Mengapa disebut "soft law":</strong><br>
+        HI disebut soft law karena: (1) tidak ada aparat penegak yang efektif (tidak ada polisi internasional yang kuat), (2) hubungan antar negara bersifat horizontal/koordinatif, bukan subordinatif, (3) tidak ada "pemerintah dunia" yang bisa memaksa, (4) sanksi atas pelanggaran sering tidak tegas.<br><br>
+        <strong>Argumen bahwa HI MEMANG ADA:</strong><br>
+        (1) Ada FAKTA SEJARAH: perjanjian-perjanjian internasional sejak 2100 SM terus ada dan dipatuhi.<br>
+        (2) Ada FAKTA SOSIAL: masyarakat internasional nyata ada, dan hukum selalu hadir di mana ada masyarakat (ubi societas, ibi ius).<br>
+        (3) Ada LEMBAGA PENEGAK: Mahkamah Internasional (yudisial) dan Mahkamah Arbitrase Permanen (The Hague).<br>
+        (4) SEBAGIAN BESAR NEGARA MEMATUHI HI secara sukarela karena kepentingan bersama — jika tidak ada HI, hubungan internasional akan kacau.<br>
+        (5) Tidak adanya badan penegak bukan berarti hukum tidak ada — hukum adat Indonesia berjalan tanpa badan formal!<br><br>
+        <strong>Kesimpulan:</strong> HI memang "lebih lemah" dari HN dalam hal penegakan, tapi keberadaannya nyata dan diakui. Kelemahan penegakan tidak meniadakan eksistensi HI sebagai hukum.
+      </div>
+      <button class="btn-show" onclick="toggleJ('j-BE4')">Lihat Jawaban</button>
+    </div>
+  </div>
+
+  <div class="tips-box" style="margin-top:32px;">
+    <h3>⭐ Ringkasan Super Cepat untuk Ujian</h3>
+    <ul>
+      <li><strong>Istilah HI</strong> pertama kali → Jeremy Bentham | <strong>Bapak HI</strong> → Hugo Grotius</li>
+      <li><strong>Pasal 38 ICJ</strong>: Primer (Perjanjian, Kebiasaan, Prinsip Umum) + Subsidair (Putusan, Doktrin)</li>
+      <li><strong>Elemen kebiasaan</strong>: Praktek Negara (duration, uniformity, generality) + Opinio Juris</li>
+      <li><strong>Syarat negara</strong> (Montevideo 1933): Penduduk, Wilayah, Pemerintah, Kapasitas hubungan internasional</li>
+      <li><strong>Monisme</strong>: HI + HN = SATU sistem (Kelsen) | <strong>Dualisme</strong>: HI ≠ HN, DUA sistem berbeda (Triepel, Anzilotti)</li>
+      <li><strong>Grundnorm</strong> HI menurut Kelsen = Pacta Sunt Servanda</li>
+      <li><strong>Vatikan</strong> diakui = Traktat Lateran 1929 | <strong>ASEAN legal personality</strong> = ASEAN Charter 2007</li>
+      <li><strong>Pengadilan Nuremberg 1946</strong> = tonggak individu sebagai subyek HI</li>
+      <li><strong>Perjanjian Westphalia 1648</strong> = lahirnya kedaulatan negara modern</li>
+      <li><strong>UDHR</strong> = 10 Desember 1948 | <strong>KAA Bandung</strong> = April 1955 (23 negara)</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+function showTab(id){
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const idx={'tab0':0,'tab1':1,'tab2':2,'tab3':3,'tab4':4,'tab5':5,'tab6':6,'tabsoal':7};
+  document.querySelectorAll('.tab-btn')[idx[id]].classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function pilih(el, qid, correct){
+  const siblings = el.parentElement.querySelectorAll('.option');
+  siblings.forEach(s=>s.classList.remove('correct','wrong'));
+  const chosen = el.querySelector('.opt-label').textContent;
+  if(chosen === correct) el.classList.add('correct');
+  else el.classList.add('wrong');
+}
+
+function toggleJ(id){
+  const j = document.getElementById(id);
+  j.classList.toggle('show');
+}
+</script>
+</body>
+</html>
